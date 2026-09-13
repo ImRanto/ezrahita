@@ -7,7 +7,7 @@ import FormField from "../components/FormField.jsx";
 import Toast from "../components/Toast.jsx";
 
 const contactItems = [
-  { icon: MapPin, title: "Nous trouver", detail: "Antananarivo, Madagascar" },
+  { icon: MapPin, title: "Nous trouver", detail: "FJKM Ambohimanandray Filadelfia, Antananarivo" },
   { icon: MessageCircle, title: "Nous écrire", detail: "contact@ezrahita.mg" },
   { icon: Clock3, title: "Répétitions", detail: "Chaque samedi, 18h30" },
 ];

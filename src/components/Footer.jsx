@@ -48,8 +48,8 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Contact">
-            <span className="text-white/56 text-xs">Antananarivo</span>
-            <span className="text-white/56 text-xs">Madagascar</span>
+            <span className="text-white/56 text-xs">FJKM Ambohimanandray Filadelfia</span>
+            <span className="text-white/56 text-xs">Antananarivo, Madagascar</span>
             <a
               href="mailto:contact@ezrahita.mg"
               className="text-white/56 text-xs transition-colors hover:text-white"
