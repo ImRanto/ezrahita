@@ -20,7 +20,8 @@ export default {
         sans: ["'DM Sans'", "system-ui", "sans-serif"],
       },
       transitionTimingFunction: {
-        "ease-out-smooth": "cubic-bezier(0.23, 1, 0.32, 1)",
+        // La classe générée est `ease-` + cette clé → `.ease-out-smooth`.
+        "out-smooth": "cubic-bezier(0.23, 1, 0.32, 1)",
       },
       keyframes: {
         reveal: {
