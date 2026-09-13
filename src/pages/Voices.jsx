@@ -62,7 +62,7 @@ export default function Voices() {
             </div>
             <div className="relative min-h-[410px] lg:min-h-[520px]">
               <img
-                src="https://picsum.photos/seed/ezrahita-voices/1200/1200"
+                src="/images/voices-rehearsal.jpg"
                 alt="Répétition de chorale"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"
               />

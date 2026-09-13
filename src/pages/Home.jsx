@@ -23,7 +23,7 @@ function Hero() {
   return (
     <section
       className="relative isolate flex items-center min-h-[700px] md:min-h-[760px] pt-[135px] md:pt-[150px] pb-24 text-white bg-ink
-        before:content-[''] before:absolute before:-z-20 before:inset-0 before:bg-[linear-gradient(90deg,rgba(8,25,48,0.92)_0%,rgba(8,25,48,0.68)_44%,rgba(8,25,48,0.28)_100%),url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=2200&q=90')] before:bg-cover before:bg-center
+        before:content-[''] before:absolute before:-z-20 before:inset-0 before:bg-[linear-gradient(90deg,rgba(8,25,48,0.92)_0%,rgba(8,25,48,0.68)_44%,rgba(8,25,48,0.28)_100%),url('/images/hero.jpg')] before:bg-cover before:bg-center
         after:content-[''] after:absolute after:-z-10 after:inset-0 after:pointer-events-none after:bg-[radial-gradient(circle_at_80%_30%,rgba(232,75,75,0.22),transparent_31%),linear-gradient(0deg,rgba(8,25,48,0.42),transparent_30%)]"
     >
       <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid md:grid-cols-[minmax(0,1fr)_290px] md:items-end gap-10 md:gap-20">
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] items-center gap-[50px] lg:gap-[90px]">
             <Reveal className="relative min-h-[410px] lg:min-h-[520px] after:content-[''] after:absolute after:-right-[18px] after:-bottom-[18px] after:w-[55%] after:h-[55%] after:border after:border-coral after:rounded-[0_0_30px_0] after:-z-10">
               <img
-                src="https://picsum.photos/seed/ezrahita-about-home/1200/1200"
+                src="/images/home-chorale.jpg"
                 alt="Chorale en concert"
                 loading="lazy"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"

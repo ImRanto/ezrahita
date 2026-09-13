@@ -1,9 +1,19 @@
 // Données de démonstration pour le site de la chorale Ezrahita.
-// Toutes les images proviennent de services de photos libres de droit
-// (picsum.photos pour les scènes, pravatar.cc pour les portraits).
+//
+// Toutes les images sont servies en local depuis `public/images`. On les
+// référence toujours depuis la racine du site (`/images/...`) : le dossier
+// `public` ne figure jamais dans le chemin, Vite le copie tel quel dans
+// `dist/`. Voir `public/images/LISEZ-MOI.md` pour la liste des fichiers.
+//
+// Pour remplacer une photo, écraser simplement le fichier en gardant le même
+// nom : aucun changement de code n'est nécessaire.
+//
+// Les dimensions passées à `scene()` sont conservées dans les appels pour
+// documenter le ratio d'origine ; elles sont ignorées, le fichier local étant
+// servi tel quel.
 
-const scene = (seed, w = 900, h = 700) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
-const portrait = (n) => `https://i.pravatar.cc/500?img=${n}`;
+const scene = (name) => `/images/scenes/${name}.jpg`;
+const portrait = (name) => `/images/members/${name}.jpg`;
 
 export const stats = [
   { label: "Choristes actifs", value: 48, suffix: "" },
@@ -44,18 +54,18 @@ export const voices = [
 ];
 
 export const members = [
-  { id: "1", firstName: "Hery", name: "Hery Randrianasolo", role: "Chef de chœur", joined: "2014", voice: "Basse", image: portrait(11), bio: "Fondateur d'Ezrahita, Hery dirige le chœur depuis sa création en 2014 avec une exigence toujours portée par la joie de transmettre." },
-  { id: "2", firstName: "Fara", name: "Fara Andriamampianina", role: "Soprano soliste", joined: "2015", voice: "1er", image: portrait(47), bio: "Fara accompagne les premières voix depuis près de dix ans et prête régulièrement sa voix aux solos des grandes célébrations." },
-  { id: "3", firstName: "Tojo", name: "Tojo Rakotomalala", role: "Choriste, pupitre ténor", joined: "2017", voice: "3e", image: portrait(12), bio: "Arrivé par curiosité, Tojo est resté pour la fraternité du groupe et l'exigence musicale du répertoire." },
-  { id: "4", firstName: "Mialy", name: "Mialy Rasolofoniaina", role: "Responsable des partitions", joined: "2016", voice: "2e", image: portrait(45), bio: "Mialy organise le répertoire et veille à ce que chaque voix reçoive ses partitions à temps pour les répétitions." },
-  { id: "5", firstName: "Landry", name: "Landry Ravelomanana", role: "Choriste, pupitre basse", joined: "2018", voice: "Basse", image: portrait(14), bio: "Landry a rejoint le pupitre des basses après plusieurs années de chant en solo, séduit par la puissance du collectif." },
-  { id: "6", firstName: "Sitraka", name: "Sitraka Andriatsitohaina", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait(48), bio: "Étudiante en musicologie, Sitraka apporte une oreille précise et une grande curiosité pour les répertoires variés." },
-  { id: "7", firstName: "Ando", name: "Ando Rakotoarisoa", role: "Trésorier & choriste", joined: "2015", voice: "3e", image: portrait(15), bio: "Ando jongle entre les chiffres de l'association et les répétitions du mercredi, toujours avec le sourire." },
-  { id: "8", firstName: "Fenosoa", name: "Fenosoa Rabemananjara", role: "Choriste, pupitre alto", joined: "2020", voice: "2e", image: portrait(44), bio: "Fenosoa a découvert le chant choral à l'université et n'a plus jamais quitté un pupitre depuis." },
-  { id: "9", firstName: "Zo", name: "Zo Andrianasolo", role: "Chargé de communication", joined: "2021", voice: "Basse", image: portrait(18), bio: "Zo raconte les coulisses d'Ezrahita sur les réseaux et prépare les visuels de chaque événement." },
-  { id: "10", firstName: "Vony", name: "Vony Ranaivoson", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait(49), bio: "Vony aime particulièrement le répertoire sacré et les polyphonies malgaches traditionnelles." },
-  { id: "11", firstName: "Tahiry", name: "Tahiry Rasamimanana", role: "Choriste, pupitre ténor", joined: "2022", voice: "3e", image: portrait(21), bio: "Nouvelle recrue pleine d'énergie, Tahiry s'est vite intégré au pupitre des ténors." },
-  { id: "12", firstName: "Nomena", name: "Nomena Razafindrakoto", role: "Choriste, pupitre alto", joined: "2017", voice: "2e", image: portrait(41), bio: "Nomena partage son temps entre le chœur et l'enseignement de la musique aux enfants du quartier." },
+  { id: "1", firstName: "Hery", name: "Hery Randrianasolo", role: "Chef de chœur", joined: "2014", voice: "Basse", image: portrait("01-hery"), bio: "Fondateur d'Ezrahita, Hery dirige le chœur depuis sa création en 2014 avec une exigence toujours portée par la joie de transmettre." },
+  { id: "2", firstName: "Fara", name: "Fara Andriamampianina", role: "Soprano soliste", joined: "2015", voice: "1er", image: portrait("02-fara"), bio: "Fara accompagne les premières voix depuis près de dix ans et prête régulièrement sa voix aux solos des grandes célébrations." },
+  { id: "3", firstName: "Tojo", name: "Tojo Rakotomalala", role: "Choriste, pupitre ténor", joined: "2017", voice: "3e", image: portrait("03-tojo"), bio: "Arrivé par curiosité, Tojo est resté pour la fraternité du groupe et l'exigence musicale du répertoire." },
+  { id: "4", firstName: "Mialy", name: "Mialy Rasolofoniaina", role: "Responsable des partitions", joined: "2016", voice: "2e", image: portrait("04-mialy"), bio: "Mialy organise le répertoire et veille à ce que chaque voix reçoive ses partitions à temps pour les répétitions." },
+  { id: "5", firstName: "Landry", name: "Landry Ravelomanana", role: "Choriste, pupitre basse", joined: "2018", voice: "Basse", image: portrait("05-landry"), bio: "Landry a rejoint le pupitre des basses après plusieurs années de chant en solo, séduit par la puissance du collectif." },
+  { id: "6", firstName: "Sitraka", name: "Sitraka Andriatsitohaina", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait("06-sitraka"), bio: "Étudiante en musicologie, Sitraka apporte une oreille précise et une grande curiosité pour les répertoires variés." },
+  { id: "7", firstName: "Ando", name: "Ando Rakotoarisoa", role: "Trésorier & choriste", joined: "2015", voice: "3e", image: portrait("07-ando"), bio: "Ando jongle entre les chiffres de l'association et les répétitions du mercredi, toujours avec le sourire." },
+  { id: "8", firstName: "Fenosoa", name: "Fenosoa Rabemananjara", role: "Choriste, pupitre alto", joined: "2020", voice: "2e", image: portrait("08-fenosoa"), bio: "Fenosoa a découvert le chant choral à l'université et n'a plus jamais quitté un pupitre depuis." },
+  { id: "9", firstName: "Zo", name: "Zo Andrianasolo", role: "Chargé de communication", joined: "2021", voice: "Basse", image: portrait("09-zo"), bio: "Zo raconte les coulisses d'Ezrahita sur les réseaux et prépare les visuels de chaque événement." },
+  { id: "10", firstName: "Vony", name: "Vony Ranaivoson", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait("10-vony"), bio: "Vony aime particulièrement le répertoire sacré et les polyphonies malgaches traditionnelles." },
+  { id: "11", firstName: "Tahiry", name: "Tahiry Rasamimanana", role: "Choriste, pupitre ténor", joined: "2022", voice: "3e", image: portrait("11-tahiry"), bio: "Nouvelle recrue pleine d'énergie, Tahiry s'est vite intégré au pupitre des ténors." },
+  { id: "12", firstName: "Nomena", name: "Nomena Razafindrakoto", role: "Choriste, pupitre alto", joined: "2017", voice: "2e", image: portrait("12-nomena"), bio: "Nomena partage son temps entre le chœur et l'enseignement de la musique aux enfants du quartier." },
 ];
 
 export const events = [

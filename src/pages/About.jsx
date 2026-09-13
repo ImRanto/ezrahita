@@ -32,7 +32,7 @@ export default function About() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] items-center gap-[50px] lg:gap-[90px]">
             <div className="relative min-h-[410px] lg:min-h-[520px]">
               <img
-                src="https://picsum.photos/seed/ezrahita-about-1/1200/1200"
+                src="/images/about-chorale.jpg"
                 alt="Chorale sur scène"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"
               />
