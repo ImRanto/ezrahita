@@ -26,7 +26,7 @@ export default function Header() {
           : "text-white"
       }`}
     >
-      <div className="w-[min(1180px,calc(100%-48px))] mx-auto flex items-center justify-between min-h-[78px] gap-[30px]">
+      <div className="w-[min(1180px,calc(100%-48px))] mx-auto flex items-center justify-between min-h-[92px] gap-[30px]">
         <Brand />
 
         <nav
@@ -67,7 +67,7 @@ export default function Header() {
       {open && (
         <nav
           aria-label="Navigation mobile"
-          className="lg:hidden absolute top-[70px] right-[18px] left-[18px] grid gap-1 p-3 border border-line rounded-2xl text-ink bg-white shadow-[0_20px_45px_rgba(11,31,58,0.22)]"
+          className="lg:hidden absolute top-[92px] right-[18px] left-[18px] grid gap-1 p-3 border border-line rounded-2xl text-ink bg-white shadow-[0_20px_45px_rgba(11,31,58,0.22)]"
         >
           {navItems.map(([label, href]) => (
             <Link
