@@ -8,11 +8,13 @@
 // Pour remplacer une photo, écraser simplement le fichier en gardant le même
 // nom : aucun changement de code n'est nécessaire.
 //
-// Les dimensions passées à `scene()` sont conservées dans les appels pour
-// documenter le ratio d'origine ; elles sont ignorées, le fichier local étant
-// servi tel quel.
+// Les appels gardent les dimensions d'origine (`scene("gal-1", 900, 1100)`) pour
+// documenter le ratio attendu. Elles sont volontairement ignorées : le fichier
+// local est servi tel quel, sans recadrage.
+const scene = (name, _width, _height) => `/images/scenes/${name}.jpg`;
 
-const scene = (name) => `/images/scenes/${name}.jpg`;
+// Le préfixe numérique de `name` doit correspondre au champ `id` du membre
+// (ex. membre `id: "1"` -> `portrait("01-hery")`).
 const portrait = (name) => `/images/members/${name}.jpg`;
 
 export const stats = [
