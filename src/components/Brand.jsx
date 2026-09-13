@@ -13,7 +13,7 @@ export default function Brand({ className = "" }) {
       <img
         src="/ame-logo.png"
         alt="Logo Ezrahita"
-        className="w-[54px] h-[54px] p-1 object-contain rounded-[10px] bg-white shadow-[0_4px_12px_rgba(11,31,58,0.22)]"
+        className="w-[52px] h-[52px] p-1 object-contain rounded-[10px] bg-white shadow-[0_4px_12px_rgba(11,31,58,0.22)]"
       />
       Ezrahita
     </Link>
