@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-[#cbdafc] text-ink;
+  }
+}
+
+@layer utilities {
+  /* Small helpers for patterns that repeat across many components */
+  .eyebrow {
+    @apply flex items-center gap-2.5 text-coral text-[11px] font-bold uppercase tracking-[0.16em] before:content-[''] before:w-7 before:h-0.5 before:bg-current;
+  }
+  .text-link {
+    @apply inline-flex items-center gap-2.5 text-cobalt text-[13px] font-bold transition-all duration-200 ease-out hover:gap-3.5 hover:text-coral;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
