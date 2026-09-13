@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { useLocation } from "wouter";
 
 /**
  * Bouton flottant « revenir en haut ». Il apparaît une fois que le visiteur a
@@ -15,8 +16,13 @@ const RADIUS = 25;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 export default function ScrollToTop() {
+  const [location] = useLocation();
   const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location]);
 
   useEffect(() => {
     let frame = 0;
