@@ -9,7 +9,7 @@ import Toast from "../components/Toast.jsx";
 const contactItems = [
   { icon: MapPin, title: "Nous trouver", detail: "Antananarivo, Madagascar" },
   { icon: MessageCircle, title: "Nous écrire", detail: "contact@ezrahita.mg" },
-  { icon: Clock3, title: "Répétitions", detail: "Chaque mercredi, 18h30" },
+  { icon: Clock3, title: "Répétitions", detail: "Chaque samedi, 18h30" },
 ];
 
 export default function Contact() {

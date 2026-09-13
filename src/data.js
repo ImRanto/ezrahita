@@ -89,7 +89,7 @@ export const albums = [
 
 export const gallery = [
   { id: "1", image: scene("gal-1", 900, 1100), caption: "Concert de fin d'année", album: "Concerts" },
-  { id: "2", image: scene("gal-2", 900, 700), caption: "Répétition du mercredi", album: "Répétitions" },
+  { id: "2", image: scene("gal-2", 900, 700), caption: "Répétition du samedi", album: "Répétitions" },
   { id: "3", image: scene("gal-3", 900, 700), caption: "Avant le lever de rideau", album: "Coulisses" },
   { id: "4", image: scene("gal-4", 900, 700), caption: "Veillée de Noël", album: "Événements" },
   { id: "5", image: scene("gal-5", 900, 700), caption: "Travail des nuances", album: "Répétitions" },
