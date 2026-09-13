@@ -92,7 +92,7 @@ export default function Home() {
                 <div>
                   <Sparkles size={20} className="mx-auto mb-1" />
                   <span className="font-serif text-[22px] leading-[0.9] block">
-                    12 ans
+                    65 ans
                     <br />
                     de voix
                   </span>
