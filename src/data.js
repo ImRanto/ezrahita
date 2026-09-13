@@ -7,9 +7,9 @@ const portrait = (n) => `https://i.pravatar.cc/500?img=${n}`;
 
 export const stats = [
   { label: "Choristes actifs", value: 48, suffix: "" },
-  { label: "Concerts par an", value: 12, suffix: "+" },
-  { label: "Années d'existence", value: 12, suffix: "" },
-  { label: "Répétitions", value: 100, suffix: "%" },
+  { label: "Concerts par an", value: 1, suffix: "+" },
+  { label: "Années d'existence", value: 65, suffix: "" },
+  { label: "Répétitions", value: 98, suffix: "%" },
 ];
 
 export const voices = [
