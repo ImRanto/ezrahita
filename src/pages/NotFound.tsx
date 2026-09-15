@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import Button from "../components/Button.jsx";
+import Layout from "../components/Layout";
+import Button from "../components/Button";
 
 export default function NotFound() {
   return (

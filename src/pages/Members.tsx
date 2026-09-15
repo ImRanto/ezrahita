@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import MemberCard from "../components/MemberCard.jsx";
-import { members } from "../data.js";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import MemberCard from "../components/MemberCard";
+import { members } from "../data";
 
 const voiceOptions = ["Toutes", "1er", "2e", "3e", "Basse"];
 

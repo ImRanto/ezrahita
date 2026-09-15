@@ -1,12 +1,12 @@
 import { useRoute } from "wouter";
-import Layout from "../components/Layout.jsx";
-import BackLink from "../components/BackLink.jsx";
-import NotFound from "./NotFound.jsx";
-import { getMember } from "../data.js";
+import Layout from "../components/Layout";
+import BackLink from "../components/BackLink";
+import NotFound from "./NotFound";
+import { getMember } from "../data";
 
 export default function MemberDetail() {
-  const [, params] = useRoute("/members/:id");
-  const member = getMember(params?.id || "");
+  const [, params] = useRoute<{ id: string }>("/members/:id");
+  const member = getMember(params ? params.id : "");
   if (!member) return <NotFound />;
 
   const restOfName = member.name.split(" ").slice(1).join(" ");

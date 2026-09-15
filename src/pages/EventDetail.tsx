@@ -1,14 +1,14 @@
 import { useRoute } from "wouter";
 import { ArrowRight, MapPin } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import BackLink from "../components/BackLink.jsx";
-import Button from "../components/Button.jsx";
-import NotFound from "./NotFound.jsx";
-import { getEvent } from "../data.js";
+import Layout from "../components/Layout";
+import BackLink from "../components/BackLink";
+import Button from "../components/Button";
+import NotFound from "./NotFound";
+import { getEvent } from "../data";
 
 export default function EventDetail() {
-  const [, params] = useRoute("/events/:id");
-  const event = getEvent(params?.id || "");
+  const [, params] = useRoute<{ id: string }>("/events/:id");
+  const event = getEvent(params ? params.id : "");
   if (!event) return <NotFound />;
 
   return (

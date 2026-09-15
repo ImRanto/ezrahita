@@ -1,6 +1,6 @@
 import { Instagram, MessageCircle, Youtube } from "lucide-react";
-import Brand from "./Brand.jsx";
-import { footerNavItems } from "../nav.js";
+import Brand from "./Brand";
+import { footerNavItems } from "../nav";
 
 const socialLinks = [
   { label: "Instagram", icon: Instagram },

@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import AuthShell from "../components/AuthShell.jsx";
-import Button from "../components/Button.jsx";
+import AuthShell from "../components/AuthShell";
+import Button from "../components/Button";
 
 export default function MemberDashboard() {
   return (

@@ -1,14 +1,14 @@
 import { useRoute } from "wouter";
 import { ArrowRight } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import BackLink from "../components/BackLink.jsx";
-import Button from "../components/Button.jsx";
-import NotFound from "./NotFound.jsx";
-import { getNews } from "../data.js";
+import Layout from "../components/Layout";
+import BackLink from "../components/BackLink";
+import Button from "../components/Button";
+import NotFound from "./NotFound";
+import { getNews } from "../data";
 
 export default function NewsDetail() {
-  const [, params] = useRoute("/news/:id");
-  const article = getNews(params?.id || "");
+  const [, params] = useRoute<{ id: string }>("/news/:id");
+  const article = getNews(params ? params.id : "");
   if (!article) return <NotFound />;
 
   return (

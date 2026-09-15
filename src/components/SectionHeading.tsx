@@ -1,4 +1,13 @@
-export default function SectionHeading({ eyebrow, title, text, action }) {
+import type { ReactNode } from "react";
+
+type SectionHeadingProps = {
+  eyebrow: ReactNode;
+  title: ReactNode;
+  text?: ReactNode;
+  action?: ReactNode;
+};
+
+export default function SectionHeading({ eyebrow, title, text, action }: SectionHeadingProps) {
   return (
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-[30px] md:mb-[46px]">
       <div>

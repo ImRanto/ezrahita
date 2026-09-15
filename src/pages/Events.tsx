@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import FilterPills from "../components/FilterPills.jsx";
-import EventCard from "../components/EventCard.jsx";
-import { events } from "../data.js";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import FilterPills from "../components/FilterPills";
+import EventCard from "../components/EventCard";
+import { events } from "../data";
 
 const options = ["Tous", "Concert", "Atelier", "Célébration", "Festival", "Communauté", "Rencontre"];
 

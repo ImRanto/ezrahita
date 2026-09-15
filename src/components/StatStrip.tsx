@@ -1,4 +1,4 @@
-import { stats } from "../data.js";
+import { stats } from "../data";
 
 // Per-item border classes that reproduce the desktop 4-col / mobile 2-col
 // grid divider lines (right border between columns, bottom border between
