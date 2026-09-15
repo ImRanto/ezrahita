@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Clock3, MapPin, MessageCircle, Send } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import Button from "../components/Button.jsx";
-import FormField from "../components/FormField.jsx";
-import Toast from "../components/Toast.jsx";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import Button from "../components/Button";
+import FormField from "../components/FormField";
+import Toast from "../components/Toast";
 
 const contactItems = [
   { icon: MapPin, title: "Nous trouver", detail: "FJKM Ambohimanandray Filadelfia, Antananarivo" },

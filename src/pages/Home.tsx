@@ -1,16 +1,16 @@
 import { Link } from "wouter";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import Reveal from "../components/Reveal.jsx";
-import StatStrip from "../components/StatStrip.jsx";
-import SectionHeading from "../components/SectionHeading.jsx";
-import MemberCard from "../components/MemberCard.jsx";
-import EventCard from "../components/EventCard.jsx";
-import NewsCard from "../components/NewsCard.jsx";
-import Cta from "../components/Cta.jsx";
-import Button from "../components/Button.jsx";
-import VoiceIcon from "../components/VoiceIcon.jsx";
-import { events, gallery, members, news, voices } from "../data.js";
+import Layout from "../components/Layout";
+import Reveal from "../components/Reveal";
+import StatStrip from "../components/StatStrip";
+import SectionHeading from "../components/SectionHeading";
+import MemberCard from "../components/MemberCard";
+import EventCard from "../components/EventCard";
+import NewsCard from "../components/NewsCard";
+import Cta from "../components/Cta";
+import Button from "../components/Button";
+import VoiceIcon from "../components/VoiceIcon";
+import { events, gallery, members, news, voices } from "../data";
 
 const values = [
   ["♫", "Passion", "La musique nous rassemble et nous met en mouvement."],
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] items-center gap-[50px] lg:gap-[90px]">
             <Reveal className="relative min-h-[410px] lg:min-h-[520px] after:content-[''] after:absolute after:-right-[18px] after:-bottom-[18px] after:w-[55%] after:h-[55%] after:border after:border-coral after:rounded-[0_0_30px_0] after:-z-10">
               <img
-                src="/images/home-chorale.jpg"
+                src="/public/images/hero1.jpg"
                 alt="Chorale en concert"
                 loading="lazy"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"

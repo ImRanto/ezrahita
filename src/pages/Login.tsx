@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { ArrowRight } from "lucide-react";
-import AuthShell from "../components/AuthShell.jsx";
-import Brand from "../components/Brand.jsx";
-import Button from "../components/Button.jsx";
-import BackLink from "../components/BackLink.jsx";
-import FormField from "../components/FormField.jsx";
+import AuthShell from "../components/AuthShell";
+import Brand from "../components/Brand";
+import Button from "../components/Button";
+import BackLink from "../components/BackLink";
+import FormField from "../components/FormField";
 
 export default function Login() {
   const [, setLocation] = useLocation();

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, Menu, Users, X } from "lucide-react";
-import Brand from "./Brand.jsx";
-import { navItems } from "../nav.js";
+import Brand from "./Brand";
+import { navItems } from "../nav";
 
 export default function Header() {
   const [location] = useLocation();

@@ -1,18 +1,18 @@
 import { Route, Switch } from "wouter";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Members from "./pages/Members.jsx";
-import MemberDetail from "./pages/MemberDetail.jsx";
-import Voices from "./pages/Voices.jsx";
-import Events from "./pages/Events.jsx";
-import EventDetail from "./pages/EventDetail.jsx";
-import News from "./pages/News.jsx";
-import NewsDetail from "./pages/NewsDetail.jsx";
-import Gallery from "./pages/Gallery.jsx";
-import Contact from "./pages/Contact.jsx";
-import Login from "./pages/Login.jsx";
-import MemberDashboard from "./pages/MemberDashboard.jsx";
-import NotFound from "./pages/NotFound.jsx";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Members from "./pages/Members";
+import MemberDetail from "./pages/MemberDetail";
+import Voices from "./pages/Voices";
+import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
+import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import MemberDashboard from "./pages/MemberDashboard";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (

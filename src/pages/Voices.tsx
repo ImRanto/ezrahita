@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import VoiceIcon from "../components/VoiceIcon.jsx";
-import { voices } from "../data.js";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import VoiceIcon from "../components/VoiceIcon";
+import { voices } from "../data";
 
 export default function Voices() {
   return (

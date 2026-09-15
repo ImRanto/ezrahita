@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import FilterPills from "../components/FilterPills.jsx";
-import NewsCard from "../components/NewsCard.jsx";
-import NewsTeaserCard from "../components/NewsTeaserCard.jsx";
-import { news } from "../data.js";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import FilterPills from "../components/FilterPills";
+import NewsCard from "../components/NewsCard";
+import NewsTeaserCard from "../components/NewsTeaserCard";
+import { news } from "../data";
 
 const categories = [
   "Toutes",

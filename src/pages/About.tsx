@@ -1,9 +1,9 @@
 import { ArrowRight, Music2 } from "lucide-react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import SectionHeading from "../components/SectionHeading.jsx";
-import Cta from "../components/Cta.jsx";
-import Button from "../components/Button.jsx";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import SectionHeading from "../components/SectionHeading";
+import Cta from "../components/Cta";
+import Button from "../components/Button";
 
 const method = [
   ["01", "Écouter", "Avant de chercher sa note, apprendre à entendre celle de l'autre."],
@@ -32,7 +32,7 @@ export default function About() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] items-center gap-[50px] lg:gap-[90px]">
             <div className="relative min-h-[410px] lg:min-h-[520px]">
               <img
-                src="/images/about-chorale.jpg"
+                src="/public/images/hero2.jpg"
                 alt="Chorale sur scène"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"
               />

@@ -1,6 +1,6 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import ScrollToTop from "./ScrollToTop.jsx";
+import Header from "./Header";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 export default function Layout({ children }) {
   return (

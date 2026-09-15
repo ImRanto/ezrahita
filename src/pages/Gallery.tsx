@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Layout from "../components/Layout.jsx";
-import PageHero from "../components/PageHero.jsx";
-import FilterPills from "../components/FilterPills.jsx";
-import Lightbox from "../components/Lightbox.jsx";
-import { albums, gallery } from "../data.js";
+import Layout from "../components/Layout";
+import PageHero from "../components/PageHero";
+import FilterPills from "../components/FilterPills";
+import Lightbox from "../components/Lightbox";
+import { albums, gallery } from "../data";
 
 const ALL_ALBUMS = "Tous les albums";
 
