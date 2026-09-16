@@ -11,7 +11,7 @@
 // Les appels gardent les dimensions d'origine (`scene("gal-1", 900, 1100)`) pour
 // documenter le ratio attendu. Elles sont volontairement ignorées : le fichier
 // local est servi tel quel, sans recadrage.
-const scene = (name, _width, _height) => `/images/scenes/${name}.jpg`;
+const scene = (name, _width, _height) => `/images/Album/Evenement/${name}.jpg`;
 
 // Le préfixe numérique de `name` doit correspondre au champ `id` du membre
 // (ex. membre `id: "1"` -> `portrait("01-hery")`).
@@ -71,48 +71,52 @@ export const members = [
 ];
 
 export const events = [
-  { id: "1", day: "14", month: "Nov", date: "14 novembre 2026", type: "Concert", title: "Concert de fin d'année", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Notre grand concert annuel réunissant l'ensemble du répertoire travaillé cette année.", image: scene("event-concert-1", 900, 600) },
-  { id: "2", day: "02", month: "Déc", date: "2 décembre 2026", type: "Atelier", title: "Atelier découverte du chant choral", location: "Salle paroissiale, Analakely", description: "Une matinée ouverte à toutes et tous pour découvrir les bases du chant en chœur.", image: scene("event-atelier-1", 900, 600) },
-  { id: "3", day: "24", month: "Déc", date: "24 décembre 2026", type: "Célébration", title: "Veillée de Noël en chants", location: "Cathédrale d'Andohalo", description: "Une veillée toute en chants de Noël, en collaboration avec les chorales voisines.", image: scene("event-noel-1", 900, 600) },
-  { id: "4", day: "18", month: "Jan", date: "18 janvier 2027", type: "Festival", title: "Festival des chœurs de Madagascar", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Ezrahita participe à ce grand rassemblement de chorales venues de tout le pays.", image: scene("event-festival-1", 900, 600) },
-  { id: "5", day: "07", month: "Fév", date: "7 février 2027", type: "Communauté", title: "Journée portes ouvertes", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Venez rencontrer les choristes, visiter nos locaux et assister à une répétition ouverte.", image: scene("event-portes-1", 900, 600) },
-  { id: "6", day: "21", month: "Mar", date: "21 mars 2027", type: "Rencontre", title: "Rencontre inter-chorales", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Un moment d'échange musical avec deux autres ensembles vocaux de la capitale.", image: scene("event-rencontre-1", 900, 600) },
-  { id: "7", day: "09", month: "Mai", date: "9 mai 2027", type: "Concert", title: "Concert de printemps", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Un programme tout en légèreté pour célébrer l'arrivée des beaux jours.", image: scene("event-concert-2", 900, 600) },
+  { id: "1", day: "14", month: "Nov", date: "14 novembre 2026", type: "Concert", title: "Concert de fin d'année", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Notre grand concert annuel réunissant l'ensemble du répertoire travaillé cette année.", image: scene("scene-1", 900, 600) },
+  { id: "2", day: "02", month: "Déc", date: "2 décembre 2026", type: "Atelier", title: "Atelier découverte du chant choral", location: "Salle paroissiale, Analakely", description: "Une matinée ouverte à toutes et tous pour découvrir les bases du chant en chœur.", image: scene("scene-2", 900, 600) },
+  { id: "3", day: "24", month: "Déc", date: "24 décembre 2026", type: "Célébration", title: "Veillée de Noël en chants", location: "Cathédrale d'Andohalo", description: "Une veillée toute en chants de Noël, en collaboration avec les chorales voisines.", image: scene("scene-4", 900, 600) },
+  { id: "4", day: "18", month: "Jan", date: "18 janvier 2027", type: "Festival", title: "Festival des chœurs de Madagascar", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Ezrahita participe à ce grand rassemblement de chorales venues de tout le pays.", image: scene("scene-5", 900, 600) },
+  { id: "5", day: "07", month: "Fév", date: "7 février 2027", type: "Communauté", title: "Journée portes ouvertes", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Venez rencontrer les choristes, visiter nos locaux et assister à une répétition ouverte.", image: scene("scene-8", 900, 600) },
+  { id: "6", day: "21", month: "Mar", date: "21 mars 2027", type: "Rencontre", title: "Rencontre inter-chorales", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Un moment d'échange musical avec deux autres ensembles vocaux de la capitale.", image: scene("scene-78", 900, 600) },
+  { id: "7", day: "09", month: "Mai", date: "9 mai 2027", type: "Concert", title: "Concert de printemps", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Un programme tout en légèreté pour célébrer l'arrivée des beaux jours.", image: scene("scene-45", 900, 600) },
 ];
 
 export const news = [
-  { id: "1", category: "Annonces", date: "3 septembre 2026", title: "Ezrahita ouvre ses portes pour la nouvelle saison", excerpt: "Les auditions pour rejoindre le chœur reprennent dès le mois d'octobre, toutes voix confondues.", image: scene("news-annonce-1", 1200, 900) },
-  { id: "2", category: "Répertoire", date: "22 août 2026", title: "Un nouveau répertoire malgache à l'étude", excerpt: "Le chœur se lance dans l'apprentissage de trois polyphonies traditionnelles revisitées.", image: scene("news-repertoire-1", 900, 700) },
-  { id: "3", category: "Portraits", date: "10 août 2026", title: "Rencontre avec Fara, soprano depuis dix ans", excerpt: "Portrait d'une choriste fidèle qui a vu grandir Ezrahita au fil des saisons.", image: scene("news-portrait-1", 900, 700) },
-  { id: "4", category: "Coulisses", date: "28 juillet 2026", title: "Dans les coulisses de la dernière répétition", excerpt: "Un après-midi ordinaire, entre gammes, fous rires et mise au point des nuances.", image: scene("news-coulisses-1", 900, 700) },
-  { id: "5", category: "Concerts", date: "15 juillet 2026", title: "Retour sur le concert d'été", excerpt: "Salle comble pour notre concert annuel : merci à toutes celles et ceux qui étaient présents.", image: scene("news-concert-1", 900, 700) },
-  { id: "6", category: "Activités", date: "2 juillet 2026", title: "Un stage vocal d'une semaine cet été", excerpt: "Retour sur notre stage intensif consacré à la respiration et à la justesse collective.", image: scene("news-activite-1", 900, 700) },
-  { id: "7", category: "Communauté", date: "19 juin 2026", title: "Ezrahita s'associe à une chorale scolaire", excerpt: "Un partenariat est né avec une école du quartier pour initier les enfants au chant choral.", image: scene("news-communaute-1", 900, 700) },
-  { id: "8", category: "Annonces", date: "5 juin 2026", title: "Nouveaux horaires de répétition dès septembre", excerpt: "Les répétitions passent au mercredi soir pour permettre à plus de monde de nous rejoindre.", image: scene("news-annonce-2", 900, 700) },
-  { id: "9", category: "Portraits", date: "24 mai 2026", title: "Trois questions à notre chef de chœur", excerpt: "Hery revient sur douze années à la tête d'Ezrahita et sur ce qui fait, selon lui, un bon chœur.", image: scene("news-portrait-2", 900, 700) },
+  { id: "1", category: "Annonces", date: "3 septembre 2026", title: "Ezrahita ouvre ses portes pour la nouvelle saison", excerpt: "Les auditions pour rejoindre le chœur reprennent dès le mois d'octobre, toutes voix confondues.", image: scene("scene-10", 1200, 900) },
+  { id: "2", category: "Répertoire", date: "22 août 2026", title: "Un nouveau répertoire malgache à l'étude", excerpt: "Le chœur se lance dans l'apprentissage de trois polyphonies traditionnelles revisitées.", image: scene("scene-2", 900, 700) },
+  { id: "3", category: "Portraits", date: "10 août 2026", title: "Rencontre avec Fara, soprano depuis dix ans", excerpt: "Portrait d'une choriste fidèle qui a vu grandir Ezrahita au fil des saisons.", image: scene("scene-51", 900, 700) },
+  { id: "4", category: "Coulisses", date: "28 juillet 2026", title: "Dans les coulisses de la dernière répétition", excerpt: "Un après-midi ordinaire, entre gammes, fous rires et mise au point des nuances.", image: scene("scene-4", 900, 700) },
+  { id: "5", category: "Concerts", date: "15 juillet 2026", title: "Retour sur le concert d'été", excerpt: "Salle comble pour notre concert annuel : merci à toutes celles et ceux qui étaient présents.", image: scene("scene-5", 900, 700) },
+  { id: "6", category: "Activités", date: "2 juillet 2026", title: "Un stage vocal d'une semaine cet été", excerpt: "Retour sur notre stage intensif consacré à la respiration et à la justesse collective.", image: scene("scene-6", 900, 700) },
+  { id: "7", category: "Communauté", date: "19 juin 2026", title: "Ezrahita s'associe à une chorale scolaire", excerpt: "Un partenariat est né avec une école du quartier pour initier les enfants au chant choral.", image: scene("scene-7", 900, 700) },
+  { id: "8", category: "Annonces", date: "5 juin 2026", title: "Nouveaux horaires de répétition dès septembre", excerpt: "Les répétitions passent au mercredi soir pour permettre à plus de monde de nous rejoindre.", image: scene("scene-8", 900, 700) },
+  { id: "9", category: "Portraits", date: "24 mai 2026", title: "Trois questions à notre chef de chœur", excerpt: "Hery revient sur douze années à la tête d'Ezrahita et sur ce qui fait, selon lui, un bon chœur.", image: scene("scene-9", 900, 700) },
 ];
 
-export const albums = [
-  { title: "Concerts" },
-  { title: "Répétitions" },
-  { title: "Coulisses" },
-  { title: "Événements" },
-];
+export const gallery = Array.from({ length: 126 }, (_, index) => {
+  const number = index + 1;
 
-export const gallery = [
-  { id: "1", image: scene("gal-1", 900, 1100), caption: "Concert de fin d'année", album: "Concerts" },
-  { id: "2", image: scene("gal-2", 900, 700), caption: "Répétition du samedi", album: "Répétitions" },
-  { id: "3", image: scene("gal-3", 900, 700), caption: "Avant le lever de rideau", album: "Coulisses" },
-  { id: "4", image: scene("gal-4", 900, 700), caption: "Veillée de Noël", album: "Événements" },
-  { id: "5", image: scene("gal-5", 900, 700), caption: "Travail des nuances", album: "Répétitions" },
-  { id: "6", image: scene("gal-6", 900, 700), caption: "Festival des chœurs", album: "Événements" },
-  { id: "7", image: scene("gal-7", 900, 700), caption: "Dernières notes accordées", album: "Coulisses" },
-  { id: "8", image: scene("gal-8", 900, 700), caption: "Concert de printemps", album: "Concerts" },
-  { id: "9", image: scene("gal-9", 900, 700), caption: "Portrait de pupitre", album: "Coulisses" },
-  { id: "10", image: scene("gal-10", 900, 700), caption: "Journée portes ouvertes", album: "Événements" },
-  { id: "11", image: scene("gal-11", 900, 700), caption: "Répétition générale", album: "Répétitions" },
-  { id: "12", image: scene("gal-12", 900, 700), caption: "Salut final", album: "Concerts" },
-];
+  return {
+    id: String(number),
+    image: `/images/Album/Evenement/scene-${number}.jpg`,
+    caption: "Sortie",
+    album: "Evenement",
+  };
+});
+
+const repetitionImageCount = 12;
+
+Array.from({ length: repetitionImageCount }, (_, index) => index + 1).forEach((number) => {
+  gallery.push({
+    id: `repetition-${number}`,
+    image: `/images/Album/Repetition/repetition-${number}.jpg`,
+    caption: "Répétition",
+    album: "Repetition",
+  });
+});
+
+export const albums = [...new Set(gallery.map((item) => item.album))]
+  .sort((first, second) => first.localeCompare(second, "fr"))
+  .map((title) => ({ title }));
 
 export const getMember = (id) => members.find((m) => m.id === id);
 export const getEvent = (id) => events.find((e) => e.id === id);
