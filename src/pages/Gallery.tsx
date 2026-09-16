@@ -3,14 +3,18 @@ import Layout from "../components/Layout";
 import PageHero from "../components/PageHero";
 import FilterPills from "../components/FilterPills";
 import Lightbox from "../components/Lightbox";
+import Button from "../components/Button";
 import { albums, gallery } from "../data";
 
 const ALL_ALBUMS = "Tous les albums";
+const PHOTOS_PER_PAGE = 18;
 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState(null);
   const [album, setAlbum] = useState(ALL_ALBUMS);
+  const [visibleCount, setVisibleCount] = useState(PHOTOS_PER_PAGE);
   const filtered = album === ALL_ALBUMS ? gallery : gallery.filter((item) => item.album === album);
+  const visibleItems = filtered.slice(0, visibleCount);
   const current = lightbox === null ? null : filtered[lightbox];
 
   const move = (direction) => {
@@ -37,11 +41,15 @@ export default function Gallery() {
             <FilterPills
               options={[ALL_ALBUMS, ...albums.map((item) => item.title)]}
               active={album}
-              onChange={setAlbum}
+              onChange={(nextAlbum) => {
+                setAlbum(nextAlbum);
+                setVisibleCount(PHOTOS_PER_PAGE);
+                setLightbox(null);
+              }}
             />
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-              {filtered.map((item, index) => (
+            <div className="grid grid-cols-3 gap-3">
+              {visibleItems.map((item, index) => (
                 <button
                   key={item.id}
                   onClick={() => setLightbox(index)}
@@ -57,6 +65,14 @@ export default function Gallery() {
                 </button>
               ))}
             </div>
+
+            {visibleCount < filtered.length && (
+              <div className="flex justify-center mt-10">
+                <Button type="button" variant="ghost" onClick={() => setVisibleCount((count) => count + PHOTOS_PER_PAGE)}>
+                  Afficher la suite des photos
+                </Button>
+              </div>
+            )}
           </div>
         </section>
 
