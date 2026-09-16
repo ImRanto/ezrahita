@@ -83,7 +83,7 @@ export default function Home() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] items-center gap-[50px] lg:gap-[90px]">
             <Reveal className="relative min-h-[410px] lg:min-h-[520px] after:content-[''] after:absolute after:-right-[18px] after:-bottom-[18px] after:w-[55%] after:h-[55%] after:border after:border-coral after:rounded-[0_0_30px_0] after:-z-10">
               <img
-                src="/public/images/hero1.jpg"
+                src="/images/hero1.jpg"
                 alt="Chorale en concert"
                 loading="lazy"
                 className="w-[86%] h-[410px] lg:h-[520px] object-cover rounded-[3px_42px_3px_42px] saturate-[0.86]"
