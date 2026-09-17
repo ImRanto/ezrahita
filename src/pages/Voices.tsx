@@ -4,8 +4,15 @@ import Layout from "../components/Layout";
 import PageHero from "../components/PageHero";
 import VoiceIcon from "../components/VoiceIcon";
 import { voices } from "../data";
+import { usePageMeta } from "../seo";
 
 export default function Voices() {
+  usePageMeta({
+    title: "Les pupitres",
+    description:
+      "Premières voix, deuxièmes voix, ténors et basses : les quatre pupitres de la chorale Ezrahita.",
+  });
+
   return (
     <Layout>
       <main>

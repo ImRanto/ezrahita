@@ -5,10 +5,18 @@ import BackLink from "../components/BackLink";
 import Button from "../components/Button";
 import NotFound from "./NotFound";
 import { getEvent } from "../data";
+import { usePageMeta } from "../seo";
 
 export default function EventDetail() {
   const [, params] = useRoute<{ id: string }>("/events/:id");
   const event = getEvent(params ? params.id : "");
+
+  usePageMeta(
+    event
+      ? { title: event.title, description: `${event.type} · ${event.date} · ${event.location}` }
+      : { title: "Événement introuvable" }
+  );
+
   if (!event) return <NotFound />;
 
   return (

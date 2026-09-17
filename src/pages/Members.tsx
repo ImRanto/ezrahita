@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import PageHero from "../components/PageHero";
 import MemberCard from "../components/MemberCard";
 import { members } from "../data";
+import { usePageMeta } from "../seo";
 
 const voiceOptions = ["Toutes", "1er", "2e", "3e", "Basse"];
 
@@ -23,6 +24,12 @@ const normalizeCategory = (value) =>
   )?.value || "Tous";
 
 export default function Members() {
+  usePageMeta({
+    title: "Les membres et musiciens",
+    description:
+      "Choristes et musiciens d'Ezrahita : les visages, les pupitres et les instruments de la chorale.",
+  });
+
   const params = new URLSearchParams(window.location.search);
   const initialVoice = params.get("voice") || "Toutes";
   const [query, setQuery] = useState("");

@@ -4,6 +4,7 @@ import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
 import Cta from "../components/Cta";
 import Button from "../components/Button";
+import { usePageMeta } from "../seo";
 
 const method = [
   ["01", "Écouter", "Avant de chercher sa note, apprendre à entendre celle de l'autre."],
@@ -13,6 +14,12 @@ const method = [
 ];
 
 export default function About() {
+  usePageMeta({
+    title: "Notre chorale",
+    description:
+      "L'histoire, les valeurs et la méthode d'Ezrahita, chorale de la FJKM Ambohimanandray Filadelfia à Antananarivo.",
+  });
+
   return (
     <Layout>
       <main>

@@ -5,6 +5,7 @@ import FilterPills from "../components/FilterPills";
 import NewsCard from "../components/NewsCard";
 import NewsTeaserCard from "../components/NewsTeaserCard";
 import { news } from "../data";
+import { usePageMeta } from "../seo";
 
 const categories = [
   "Toutes",
@@ -18,6 +19,11 @@ const categories = [
 ];
 
 export default function News() {
+  usePageMeta({
+    title: "Actualités",
+    description: "Les nouvelles, les portraits et les coulisses de la vie de la chorale Ezrahita.",
+  });
+
   const [filter, setFilter] = useState("Toutes");
   const filtered = filter === "Toutes" ? news : news.filter((article) => article.category === filter);
 

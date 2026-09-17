@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+/* Les polices Google sont chargées depuis index.html (preconnect + <link>)
+   et non par un @import ici : un @import CSS bloque le rendu de toute la page. */
 
 @tailwind base;
 @tailwind components;

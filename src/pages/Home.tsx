@@ -11,6 +11,7 @@ import Cta from "../components/Cta";
 import Button from "../components/Button";
 import VoiceIcon from "../components/VoiceIcon";
 import { events, gallery, members, news, voices } from "../data";
+import { usePageMeta } from "../seo";
 
 const values = [
   ["♫", "Passion", "La musique nous rassemble et nous met en mouvement."],
@@ -73,6 +74,12 @@ function Hero() {
 }
 
 export default function Home() {
+  usePageMeta({
+    title: "Chorale d'Antananarivo",
+    description:
+      "Chanter ensemble, aller plus loin : découvrez la chorale Ezrahita, ses membres, ses musiciens, ses concerts et ses actualités.",
+  });
+
   return (
     <Layout>
       <main>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      body {
+        position: relative;
+        background: #081930;
+        color: #fff;
+        font-family: "DM Sans", system-ui, sans-serif;
+      }
+      .photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+      }
+      .scrim {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(8, 25, 48, 0.97) 0%, rgba(8, 25, 48, 0.85) 44%, rgba(8, 25, 48, 0.38) 100%),
+          radial-gradient(circle at 82% 24%, rgba(232, 75, 75, 0.4), transparent 48%);
+      }
+      .content {
+        position: relative;
+        height: 100%;
+        padding: 60px 72px 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 14px;
+        background: #fff;
+        padding: 5px;
+        object-fit: contain;
+      }
+      .brand {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+      .brand small {
+        display: block;
+        margin-top: 7px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        color: #ffb5b1;
+      }
+      .rule {
+        width: 66px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #1d4ed8, #e84b4b);
+        margin-bottom: 26px;
+      }
+      h1 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 100px;
+        font-weight: 600;
+        line-height: 0.86;
+        letter-spacing: -0.03em;
+      }
+      h1 em {
+        font-style: normal;
+        color: #ffb5b1;
+      }
+      .bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .tagline {
+        font-size: 15px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .place {
+        text-align: right;
+        font-size: 15px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.72);
+      }
+      .place strong {
+        display: block;
+        font-size: 17px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="photo" src="../public/images/hero2.jpg" alt="" />
+    <div class="scrim"></div>
+    <div class="content">
+      <div class="top">
+        <img class="logo" src="../public/ame-logo.png" alt="" />
+        <div class="brand">
+          Antoko Mpihira Ezrahita
+          <small>Antananarivo · Madagascar</small>
+        </div>
+      </div>
+      <div>
+        <div class="rule"></div>
+        <h1>Chanter<br /><em>ensemble,</em><br />aller plus loin.</h1>
+      </div>
+      <div class="bottom">
+        <span class="tagline">Une voix · une communauté · une passion</span>
+        <span class="place">
+          <strong>FJKM Ambohimanandray Filadelfia</strong>
+          Antananarivo, Madagascar
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

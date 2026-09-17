@@ -5,10 +5,18 @@ import BackLink from "../components/BackLink";
 import Button from "../components/Button";
 import NotFound from "./NotFound";
 import { getNews } from "../data";
+import { usePageMeta } from "../seo";
 
 export default function NewsDetail() {
   const [, params] = useRoute<{ id: string }>("/news/:id");
   const article = getNews(params ? params.id : "");
+
+  usePageMeta(
+    article
+      ? { title: article.title, description: article.excerpt }
+      : { title: "Article introuvable" }
+  );
+
   if (!article) return <NotFound />;
 
   return (

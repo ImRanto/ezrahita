@@ -5,11 +5,18 @@ import FilterPills from "../components/FilterPills";
 import Lightbox from "../components/Lightbox";
 import Button from "../components/Button";
 import { albums, gallery } from "../data";
+import { usePageMeta } from "../seo";
 
 const ALL_ALBUMS = "Tous les albums";
 const PHOTOS_PER_PAGE = 18;
 
 export default function Gallery() {
+  usePageMeta({
+    title: "Galerie photos",
+    description:
+      "Répétitions, concerts et vie du groupe : la galerie photo de la chorale Ezrahita.",
+  });
+
   const [lightbox, setLightbox] = useState(null);
   const [album, setAlbum] = useState(ALL_ALBUMS);
   const [visibleCount, setVisibleCount] = useState(PHOTOS_PER_PAGE);

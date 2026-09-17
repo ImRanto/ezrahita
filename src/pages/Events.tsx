@@ -4,10 +4,17 @@ import PageHero from "../components/PageHero";
 import FilterPills from "../components/FilterPills";
 import EventCard from "../components/EventCard";
 import { events } from "../data";
+import { usePageMeta } from "../seo";
 
 const options = ["Tous", "Concert", "Atelier", "Célébration", "Festival", "Communauté", "Rencontre"];
 
 export default function Events() {
+  usePageMeta({
+    title: "Agenda",
+    description:
+      "Concerts, ateliers, célébrations et sorties : les prochains rendez-vous de la chorale Ezrahita.",
+  });
+
   const [filter, setFilter] = useState("Tous");
   const filtered = filter === "Tous" ? events : events.filter((event) => event.type === filter);
 

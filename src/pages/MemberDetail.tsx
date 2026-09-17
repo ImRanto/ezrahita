@@ -3,10 +3,21 @@ import Layout from "../components/Layout";
 import BackLink from "../components/BackLink";
 import NotFound from "./NotFound";
 import { getMember, memberRoleLabel } from "../data";
+import { usePageMeta } from "../seo";
 
 export default function MemberDetail() {
   const [, params] = useRoute<{ id: string }>("/members/:id");
   const member = getMember(params ? params.id : "");
+
+  usePageMeta(
+    member
+      ? {
+          title: member.name,
+          description: `${memberRoleLabel(member)} au sein de la chorale Ezrahita.`,
+        }
+      : { title: "Membre introuvable" }
+  );
+
   if (!member) return <NotFound />;
 
   const restOfName = member.name.split(" ").slice(1).join(" ");

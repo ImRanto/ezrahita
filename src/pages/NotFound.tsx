@@ -1,8 +1,14 @@
 import { ArrowRight } from "lucide-react";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
+import { usePageMeta } from "../seo";
 
 export default function NotFound() {
+  usePageMeta({
+    title: "Page introuvable",
+    description: "Cette page n'existe pas (ou plus) sur le site de la chorale Ezrahita.",
+  });
+
   return (
     <Layout>
       <main className="min-h-[75vh] grid place-items-center text-center py-[150px] px-6">

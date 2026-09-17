@@ -1,8 +1,14 @@
 import { ArrowRight } from "lucide-react";
 import AuthShell from "../components/AuthShell";
 import Button from "../components/Button";
+import { usePageMeta } from "../seo";
 
 export default function MemberDashboard() {
+  usePageMeta({
+    title: "Tableau de bord",
+    description: "Votre espace membre de la chorale Ezrahita.",
+  });
+
   return (
     <AuthShell>
       <div>

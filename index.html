@@ -2,13 +2,83 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/ame-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Antoko Mpihira Ezrahita (AME)</title>
+    <meta name="theme-color" content="#0b1f3a" />
+
+    <!-- ⚠️ Domaine à remplacer le jour de la mise en ligne (voir aussi src/seo.ts,
+         public/robots.txt et public/sitemap.xml). -->
+    <link rel="canonical" href="https://ezrahita.mg/" />
+
+    <title>Antoko Mpihira Ezrahita — Chorale d'Antananarivo</title>
     <meta
       name="description"
-      content="Ezrahita est une chorale d'Antananarivo. Découvrez ses membres, ses activités, ses événements et son actualité."
+      content="Antoko Mpihira Ezrahita (AME) est une chorale d'Antananarivo : ses membres, ses musiciens, ses concerts, ses activités et ses actualités."
     />
+    <meta name="author" content="Antoko Mpihira Ezrahita" />
+
+    <!-- Aperçu lors des partages (Facebook, WhatsApp, LinkedIn, Messenger…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Antoko Mpihira Ezrahita" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Antoko Mpihira Ezrahita — Chorale d'Antananarivo" />
+    <meta
+      property="og:description"
+      content="Chanter ensemble, aller plus loin : découvrez la chorale Ezrahita, ses membres, ses concerts et ses actualités."
+    />
+    <meta property="og:url" content="https://ezrahita.mg/" />
+    <meta property="og:image" content="https://ezrahita.mg/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Chorale Ezrahita en concert — chanter ensemble, aller plus loin."
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Antoko Mpihira Ezrahita — Chorale d'Antananarivo" />
+    <meta
+      name="twitter:description"
+      content="Chanter ensemble, aller plus loin : découvrez la chorale Ezrahita, ses membres, ses concerts et ses actualités."
+    />
+    <meta name="twitter:image" content="https://ezrahita.mg/images/og-image.png" />
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Polices : preconnect + <link> plutôt qu'un @import CSS bloquant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Données structurées : aide Google à identifier la chorale -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Antoko Mpihira Ezrahita",
+        "alternateName": "AME",
+        "description": "Chorale d'Antananarivo (FJKM Ambohimanandray Filadelfia) réunissant choristes et musiciens.",
+        "url": "https://ezrahita.mg/",
+        "image": "https://ezrahita.mg/images/og-image.png",
+        "email": "ezrahita.ambohimanandray@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "FJKM Ambohimanandray Filadelfia",
+          "addressLocality": "Antananarivo",
+          "addressCountry": "MG"
+        },
+        "sameAs": [
+          "https://www.facebook.com/AntokoMpihiraEzrahita",
+          "http://www.youtube.com/@ezrahita"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

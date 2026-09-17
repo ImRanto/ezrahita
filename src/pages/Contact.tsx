@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import FormField from "../components/FormField";
 import Toast from "../components/Toast";
 import { contactEmail, venue } from "../data";
+import { usePageMeta } from "../seo";
 
 const contactItems = [
   {
@@ -19,6 +20,12 @@ const contactItems = [
 ];
 
 export default function Contact() {
+  usePageMeta({
+    title: "Contact",
+    description:
+      "Rejoindre la chorale, poser une question ou venir à une répétition : coordonnées et formulaire de contact d'Ezrahita.",
+  });
+
   const [sent, setSent] = useState(false);
 
   const submit = (e) => {

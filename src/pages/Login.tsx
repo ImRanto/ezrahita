@@ -6,8 +6,14 @@ import Brand from "../components/Brand";
 import Button from "../components/Button";
 import BackLink from "../components/BackLink";
 import FormField from "../components/FormField";
+import { usePageMeta } from "../seo";
 
 export default function Login() {
+  usePageMeta({
+    title: "Espace membre",
+    description: "Connexion à l'espace membre de la chorale Ezrahita.",
+  });
+
   const [, setLocation] = useLocation();
   const [submitted, setSubmitted] = useState(false);
 
