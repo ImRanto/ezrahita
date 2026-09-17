@@ -59,18 +59,21 @@ export const voices = [
 ];
 
 export const members = [
-  { id: "1", firstName: "Hery", name: "Hery Randrianasolo", role: "Chef de chœur", joined: "2014", voice: "Basse", image: portrait("01-hery"), bio: "Fondateur d'Ezrahita, Hery dirige le chœur depuis sa création en 2014 avec une exigence toujours portée par la joie de transmettre." },
-  { id: "2", firstName: "Fara", name: "Fara Andriamampianina", role: "Soprano soliste", joined: "2015", voice: "1er", image: portrait("02-fara"), bio: "Fara accompagne les premières voix depuis près de dix ans et prête régulièrement sa voix aux solos des grandes célébrations." },
-  { id: "3", firstName: "Tojo", name: "Tojo Rakotomalala", role: "Choriste, pupitre ténor", joined: "2017", voice: "3e", image: portrait("03-tojo"), bio: "Arrivé par curiosité, Tojo est resté pour la fraternité du groupe et l'exigence musicale du répertoire." },
-  { id: "4", firstName: "Mialy", name: "Mialy Rasolofoniaina", role: "Responsable des partitions", joined: "2016", voice: "2e", image: portrait("04-mialy"), bio: "Mialy organise le répertoire et veille à ce que chaque voix reçoive ses partitions à temps pour les répétitions." },
-  { id: "5", firstName: "Landry", name: "Landry Ravelomanana", role: "Choriste, pupitre basse", joined: "2018", voice: "Basse", image: portrait("05-landry"), bio: "Landry a rejoint le pupitre des basses après plusieurs années de chant en solo, séduit par la puissance du collectif." },
-  { id: "6", firstName: "Sitraka", name: "Sitraka Andriatsitohaina", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait("06-sitraka"), bio: "Étudiante en musicologie, Sitraka apporte une oreille précise et une grande curiosité pour les répertoires variés." },
-  { id: "7", firstName: "Ando", name: "Ando Rakotoarisoa", role: "Trésorier & choriste", joined: "2015", voice: "3e", image: portrait("07-ando"), bio: "Ando jongle entre les chiffres de l'association et les répétitions du mercredi, toujours avec le sourire." },
-  { id: "8", firstName: "Fenosoa", name: "Fenosoa Rabemananjara", role: "Choriste, pupitre alto", joined: "2020", voice: "2e", image: portrait("08-fenosoa"), bio: "Fenosoa a découvert le chant choral à l'université et n'a plus jamais quitté un pupitre depuis." },
-  { id: "9", firstName: "Zo", name: "Zo Andrianasolo", role: "Chargé de communication", joined: "2021", voice: "Basse", image: portrait("09-zo"), bio: "Zo raconte les coulisses d'Ezrahita sur les réseaux et prépare les visuels de chaque événement." },
-  { id: "10", firstName: "Vony", name: "Vony Ranaivoson", role: "Choriste, pupitre soprano", joined: "2019", voice: "1er", image: portrait("10-vony"), bio: "Vony aime particulièrement le répertoire sacré et les polyphonies malgaches traditionnelles." },
-  { id: "11", firstName: "Tahiry", name: "Tahiry Rasamimanana", role: "Choriste, pupitre ténor", joined: "2022", voice: "3e", image: portrait("11-tahiry"), bio: "Nouvelle recrue pleine d'énergie, Tahiry s'est vite intégré au pupitre des ténors." },
-  { id: "12", firstName: "Nomena", name: "Nomena Razafindrakoto", role: "Choriste, pupitre alto", joined: "2017", voice: "2e", image: portrait("12-nomena"), bio: "Nomena partage son temps entre le chœur et l'enseignement de la musique aux enfants du quartier." },
+  { id: "1", firstName: "Mamy", name: "President Mamy", role: "President 65ème", joined: "2024", voice: "Basse", image: portrait("Mamy"), bio: "Mamy est le président du 65ème depuis 2026, apportant sa vision et son leadership pour guider Ezrahita vers de nouveaux sommets." },
+  { id: "2", firstName: "Arisoa", name: "Arisoa", role: "Choeur", joined: "2025", voice: "1er", image: portrait("Arisoa"), bio: "Arisoa est une des nouvelle recrue de la 1ere voix." },
+  { id: "3", firstName: "Setra", name: "Setra", role: "Choriste, pupitre basse", joined: "2010", voice: "Basse", image: portrait("Setra"), bio: "Un des element clé et musicien du groupe." },
+  { id: "4", firstName: "Rinoh", name: "Rinoh", role: "Tenor", joined: "2010", voice: "Basse", image: portrait("Rinoh"), bio: "Rinoh fait partie du groupe depuis plusieurs années et apporte sa touche personnelle au répertoire." },
+  { id: "5", firstName: "Rinah", name: "Rinah", role: "Choeur du premiere voix", joined: "2010", voice: "1er", image: portrait("Rinah"), bio: "Rinah est une des membres actives du chœur , jonglant entre Responsable des chants, 1er voix, chef de Choeur et  Soliste du groupe." },
+  { id: "6", firstName: "Natacha", name: "Natacha", role: "Choriste, 1ère voix", joined: "2007", voice: "1er", image: portrait("Natacha"), bio: "Une des responsables du chant et chef de Choeur TAME." },
+  { id: "7", firstName: "Kanto", name: "Kanto", role: "1er voix ,soliste", joined: "2007", voice: "1e", image: portrait("Kanto"), bio: "Soliste et premiere voix active" },
+  { id: "8", firstName: "Jacky", name: "Jacky", role: "Basse", joined: "2000", voice: "Basse", image: portrait("Jacky"), bio: "un des plus anciens membres du groupe integrant encore le groupe et occupe la position de basse." },
+  { id: "9", firstName: "Benet", name: "Benet", role: "Tenor", joined: "2000", voice: "3e", image: portrait("Benet"), bio: "Un père pour les jeunes integrant la position Tenor, un des anciens." },
+  { id: "10", firstName: "Tsiky", name: "Tsiky", role: "Tenor , soliste du groupe", joined: "2012", voice: "3e", image: portrait("Tsiky"), bio: "Tsiky , comme dis son prenom est un des comédient du groupe , mais aussi un element clé du Tenor occupant une place parmis les solistes." },
+  { id: "11", firstName: "Prisca", name: "Prisca", role: "Pupitre 1er voix", joined: "2017", voice: "1er", image: portrait("Prisca"), bio: "Premier voix ayant beaucoup d'energie ,toujour prete pour aider et faisant partie des solistes." },
+  { id: "12", firstName: "Ranto", name: "Ranto", role: "nouvelle recrue Tenor", joined: "2024", voice: "3e", image: portrait("ranto"), bio: "Nouveau parmis les Tenors , mais deja intégré au groupe." },
+  { id: "13", firstName: "Tiavina", name: "Tiavina", role: "nouvelle recrue 2eme voix", joined: "2024", voice: "2e", image: portrait("Tiavina"), bio: "Nouvelle recrue du 2eme voix." },
+  { id: "14", firstName: "Liantsoa", name: "Liantsoa", role: "Pupitre 2eme voix", joined: "2012", voice: "2e", image: portrait("Liantsoa"), bio: "Une des plus active parmis les 2eme voix" },
+  { id: "15", firstName: "Mireille", name: "Mireille", role: "2eme Voix active", joined: "2012", voice: "2e", image: portrait("Mireille"), bio: "Une des plus active parmis les 2eme voix." },
 ];
 
 export const events = [
