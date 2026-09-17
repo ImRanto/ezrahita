@@ -1,6 +1,7 @@
 const scene = (name, _width, _height) => `/images/Album/Evenement/${name}.jpg`;
 const repetition = (name, _width, _height) => `/images/Album/Repetition/${name}.jpg`;
 const portrait = (name) => `/images/members/${name}.jpg`;
+const musicianPortrait = (name) => `/images/members/Musicien/${name}-m.jpg`;
 const concert = (name, _width, _height) => `/images/Album/Concert/${name}.jpg`;
 const Atelier = (name, _width, _height) => `/images/Album/Atelier/${name}.jpg`;
 
@@ -43,21 +44,29 @@ export const voices = [
 ];
 
 export const members = [
-  { id: "1", firstName: "Mamy", name: "President", role: "President 65ème", joined: "2024", voice: "Basse", image: portrait("Mamy"), bio: "Mamy est le président du 65ème depuis 2026, apportant sa vision et son leadership pour guider Ezrahita vers de nouveaux sommets." },
-  { id: "2", firstName: "Arisoa", name: "Arisoa", role: "Choeur", joined: "2025", voice: "1er", image: portrait("Arisoa"), bio: "Arisoa est une des nouvelle recrue de la 1ere voix." },
-  { id: "3", firstName: "Setra", name: "Setra", role: "Choriste, pupitre basse", joined: "2010", voice: "Basse", image: portrait("Setra"), bio: "Un des element clé et musicien du groupe." },
-  { id: "4", firstName: "Rinoh", name: "Rinoh", role: "Tenor", joined: "2010", voice: "Basse", image: portrait("Rinoh"), bio: "Rinoh fait partie du groupe depuis plusieurs années et apporte sa touche personnelle au répertoire." },
-  { id: "5", firstName: "Rinah", name: "Rinah", role: "Choeur du premiere voix", joined: "2010", voice: "1er", image: portrait("Rinah"), bio: "Rinah est une des membres actives du chœur , jonglant entre Responsable des chants, 1er voix, chef de Choeur et  Soliste du groupe." },
-  { id: "6", firstName: "Natacha", name: "Natacha", role: "Choriste, 1ère voix", joined: "2007", voice: "1er", image: portrait("Natacha"), bio: "Une des responsables du chant et chef de Choeur TAME." },
-  { id: "7", firstName: "Kanto", name: "Kanto", role: "1er voix ,soliste", joined: "2007", voice: "1e", image: portrait("Kanto"), bio: "Soliste et premiere voix active" },
-  { id: "8", firstName: "Jacky", name: "Jacky", role: "Basse", joined: "2000", voice: "Basse", image: portrait("Jacky"), bio: "un des plus anciens membres du groupe integrant encore le groupe et occupe la position de basse." },
-  { id: "9", firstName: "Benet", name: "Benet", role: "Tenor", joined: "2000", voice: "3e", image: portrait("Benet"), bio: "Un père pour les jeunes integrant la position Tenor, un des anciens." },
-  { id: "10", firstName: "Tsiky", name: "Tsiky", role: "Tenor , soliste du groupe", joined: "2012", voice: "3e", image: portrait("Tsiky"), bio: "Tsiky , comme dis son prenom est un des comédient du groupe , mais aussi un element clé du Tenor occupant une place parmis les solistes." },
-  { id: "11", firstName: "Prisca", name: "Prisca", role: "Pupitre 1er voix", joined: "2017", voice: "1er", image: portrait("Prisca"), bio: "Premier voix ayant beaucoup d'energie ,toujour prete pour aider et faisant partie des solistes." },
-  { id: "12", firstName: "Ranto", name: "Ranto", role: "nouvelle recrue Tenor", joined: "2024", voice: "3e", image: portrait("ranto"), bio: "Nouveau parmis les Tenors , mais deja intégré au groupe." },
-  { id: "13", firstName: "Tiavina", name: "Tiavina", role: "nouvelle recrue 2eme voix", joined: "2024", voice: "2e", image: portrait("Tiavina"), bio: "Nouvelle recrue du 2eme voix." },
-  { id: "14", firstName: "Liantsoa", name: "Liantsoa", role: "Pupitre 2eme voix", joined: "2012", voice: "2e", image: portrait("Liantsoa"), bio: "Une des plus active parmis les 2eme voix" },
-  { id: "15", firstName: "Mireille", name: "Mireille", role: "2eme Voix active", joined: "2012", voice: "2e", image: portrait("Mireille"), bio: "Une des plus active parmis les 2eme voix." },
+  { id: "1", category: "Choriste", firstName: "Mamy", name: "President", role: "President 65ème", joined: "2024", voice: "Basse", image: portrait("Mamy"), bio: "Mamy est le président du 65ème depuis 2026, apportant sa vision et son leadership pour guider Ezrahita vers de nouveaux sommets." },
+  { id: "2", category: "Choriste", firstName: "Arisoa", name: "Arisoa", role: "Choeur", joined: "2025", voice: "1er", image: portrait("Arisoa"), bio: "Arisoa est une des nouvelle recrue de la 1ere voix." },
+  { id: "3", category: "Choriste", firstName: "Setra", name: "Setra", role: "Choriste, pupitre basse", joined: "2010", voice: "Basse", image: portrait("Setra"), bio: "Un des element clé et musicien du groupe." },
+  { id: "4", category: "Choriste", firstName: "Rinoh", name: "Rinoh", role: "Tenor", joined: "2010", voice: "Basse", image: portrait("Rinoh"), bio: "Rinoh fait partie du groupe depuis plusieurs années et apporte sa touche personnelle au répertoire." },
+  { id: "5", category: "Choriste", firstName: "Rinah", name: "Rinah", role: "Choeur du premiere voix", joined: "2010", voice: "1er", image: portrait("Rinah"), bio: "Rinah est une des membres actives du chœur , jonglant entre Responsable des chants, 1er voix, chef de Choeur et  Soliste du groupe." },
+  { id: "6", category: "Choriste", firstName: "Natacha", name: "Natacha", role: "Choriste, 1ère voix", joined: "2007", voice: "1er", image: portrait("Natacha"), bio: "Une des responsables du chant et chef de Choeur TAME." },
+  { id: "7", category: "Choriste", firstName: "Kanto", name: "Kanto", role: "1er voix ,soliste", joined: "2007", voice: "1e", image: portrait("Kanto"), bio: "Soliste et premiere voix active" },
+  { id: "8", category: "Choriste", firstName: "Jacky", name: "Jacky", role: "Basse", joined: "2000", voice: "Basse", image: portrait("Jacky"), bio: "un des plus anciens membres du groupe integrant encore le groupe et occupe la position de basse." },
+  { id: "9", category: "Choriste", firstName: "Benet", name: "Benet", role: "Tenor", joined: "2000", voice: "3e", image: portrait("Benet"), bio: "Un père pour les jeunes integrant la position Tenor, un des anciens." },
+  { id: "10", category: "Choriste", firstName: "Tsiky", name: "Tsiky", role: "Tenor , soliste du groupe", joined: "2012", voice: "3e", image: portrait("Tsiky"), bio: "Tsiky , comme dis son prenom est un des comédient du groupe , mais aussi un element clé du Tenor occupant une place parmis les solistes." },
+  { id: "11", category: "Choriste", firstName: "Prisca", name: "Prisca", role: "Pupitre 1er voix", joined: "2017", voice: "1er", image: portrait("Prisca"), bio: "Premier voix ayant beaucoup d'energie ,toujour prete pour aider et faisant partie des solistes." },
+  { id: "12", category: "Choriste", firstName: "Ranto", name: "Ranto", role: "nouvelle recrue Tenor", joined: "2024", voice: "3e", image: portrait("ranto"), bio: "Nouveau parmis les Tenors , mais deja intégré au groupe." },
+  { id: "13", category: "Choriste", firstName: "Tiavina", name: "Tiavina", role: "nouvelle recrue 2eme voix", joined: "2024", voice: "2e", image: portrait("Tiavina"), bio: "Nouvelle recrue du 2eme voix." },
+  { id: "14", category: "Choriste", firstName: "Liantsoa", name: "Liantsoa", role: "Pupitre 2eme voix", joined: "2012", voice: "2e", image: portrait("Liantsoa"), bio: "Une des plus active parmis les 2eme voix" },
+  { id: "15", category: "Choriste", firstName: "Mireille", name: "Mireille", role: "2eme Voix active", joined: "2012", voice: "2e", image: portrait("Mireille"), bio: "Une des plus active parmis les 2eme voix." },
+  // --- Musiciens (portraits dans public/images/members/Musicien/) ---
+  // `instrument` est volontairement vide : à compléter quand l'info sera disponible,
+  // la carte affichera alors « Musicien · <instrument> ».
+  { id: "16", category: "Musicien", firstName: "Be", name: "Be", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Be"), bio: "Be accompagne le chœur lors des grandes célébrations et veille au rythme de l'ensemble." },
+  { id: "17", category: "Musicien", firstName: "Fitahiana", name: "Fitahiana", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Fitahiana"), bio: "Fitahiana met son oreille musicale au service du groupe, entre accompagnement et arrangements." },
+  { id: "18", category: "Musicien", firstName: "Kiki", name: "Kiki", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Kiki"), bio: "Kiki complète l'ensemble et veille à l'équilibre sonore pendant les concerts." },
+  { id: "19", category: "Musicien", firstName: "Ranto", name: "Ranto", role: "Musicien", joined: "2024", instrument: "", voice: "", image: musicianPortrait("Ranto"), bio: "Ranto chante parmi les ténors et accompagne le groupe sur scène." },
+  { id: "20", category: "Musicien", firstName: "Setra", name: "Setra", role: "Musicien", joined: "2010", instrument: "", voice: "", image: musicianPortrait("Setra"), bio: "Setra accompagne le chœur depuis 2010 et compte parmi les musiciens historiques du groupe." },
 ];
 
 export const events = [
@@ -106,6 +115,10 @@ export const gallery = [
 export const albums = [...new Set(gallery.map((item) => item.album))]
   .sort((first, second) => first.localeCompare(second, "fr"))
   .map((title) => ({ title }));
+
+// Libellé affiché pour un membre : « Musicien · Piano » si l'instrument est renseigné.
+export const memberRoleLabel = (member) =>
+  member.instrument ? `${member.role} · ${member.instrument}` : member.role;
 
 export const getMember = (id) => members.find((m) => m.id === id);
 export const getEvent = (id) => events.find((e) => e.id === id);

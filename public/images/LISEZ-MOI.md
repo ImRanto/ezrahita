@@ -19,43 +19,70 @@ et minuscules comprises) : aucun changement de code n'est nécessaire.
   (picsum.photos / pravatar.cc) : elles sont là pour que le site s'affiche en
   attendant les vraies photos.
 
-## Contenu des fichiers
+## Carte des fichiers
 
-| Fichier | Utilisé pour |
+| Fichier | Utilisation | Où c'est utilisé dans le code |
+| --- | --- | --- |
+| `hero.jpg` | Image de fond du hero (accueil) | `src/pages/Home.tsx` (CSS `background-image`) |
+| `hero1.jpg` | Photo « chorale en concert » (accueil) | `src/pages/Home.tsx` (`<img>`) |
+| `hero2.jpg` | Photo « chorale sur scène » (à propos) | `src/pages/About.tsx` (`<img>`) |
+| `voices-rehearsal.jpg` | Photo de répétition (pupitres) | `src/pages/Voices.tsx` (`<img>`) |
+| `about-chorale.jpg` | Photo « à propos » (non utilisée en code) | — |
+| `home-chorale.jpg` | Photo accueil (non utilisée en code) | — |
+| `ame-logo.png` | Logo du site + favicon | `src/components/Brand.tsx` + `index.html` |
+
+## Album Evenement
+
+Dossier : `Album/Evenement/`
+
+Photos numérotées `scene-1.jpg` à `scene-126.jpg`.
+
+Utilisées pour :
+- Les **événements** (agenda) → `src/data.ts`, fonction `scene()`
+- Les **actualités** (journal) → `src/data.ts`, fonction `scene()`
+- La **galerie** → `src/data.ts`, boucle `Array.from()`
+
+Pour changer une image d'événement ou d'actu, remplace le fichier
+`scene-{numéro}.jpg` correspondant dans ce dossier.
+
+## Album Repetition
+
+Dossier : `Album/Repetition/`
+
+Photos numérotées `repetition-1.jpg` à `repetition-12.jpg`.
+
+Utilisées pour la **galerie** (album « Répétition »).
+
+## Portraits des choristes
+
+Dossier : `members/`
+
+Fichiers `Prenom.jpg` (ex. `Setra.jpg`, `Arisoa.jpg`).
+
+Le nom du fichier correspond au prénom passé à la fonction `portrait()` dans
+`src/data.ts` (tableau `members`, membres avec `category: "Choriste"`).
+Pour changer un portrait, remplace simplement le fichier du même nom.
+
+## Portraits des musiciens
+
+Dossier : `members/Musicien/`
+
+| Fichier | Musicien |
 | --- | --- |
-| `hero.jpg` | Image de fond du haut de la page d'accueil |
-| `home-chorale.jpg` | Photo « Une communauté réunie par la musique » (accueil) |
-| `about-chorale.jpg` | Photo de la page « Notre chorale » |
-| `voices-rehearsal.jpg` | Photo de la page « Les pupitres » |
-| `scenes/event-*.jpg` | Visuels des événements (agenda + page événement) |
-| `scenes/news-*.jpg` | Visuels des actualités (journal + page article) |
-| `scenes/gal-*.jpg` | Photos de la galerie (vignettes + visionneuse) |
-| `members/*.jpg` | Portraits des choristes (fiches membres) |
+| `Be-m.jpg` | Be |
+| `Fitahiana-m.jpg` | Fitahiana |
+| `Kiki-m.jpg` | Kiki |
+| `Ranto-m.jpg` | Ranto |
+| `Setra-m.jpg` | Setra |
 
-### Événements — `scenes/`
+Le suffixe `-m` distingue le portrait « musicien » du portrait « choriste » du
+même nom. Ces fichiers sont appelés par la fonction `musicianPortrait()` dans
+`src/data.ts` (membres avec `category: "Musicien"`).
 
-`event-concert-1`, `event-atelier-1`, `event-noel-1`, `event-festival-1`,
-`event-portes-1`, `event-rencontre-1`, `event-concert-2`
+La page `/membres` propose une pilule « Musiciens » pour afficher uniquement
+cette catégorie.
 
-### Actualités — `scenes/`
-
-`news-annonce-1`, `news-repertoire-1`, `news-portrait-1`, `news-coulisses-1`,
-`news-concert-1`, `news-activite-1`, `news-communaute-1`, `news-annonce-2`,
-`news-portrait-2`
-
-### Galerie — `scenes/`
-
-`gal-1` à `gal-12`
-
-### Choristes — `members/`
-
-`01-hery`, `02-fara`, `03-tojo`, `04-mialy`, `05-landry`, `06-sitraka`,
-`07-ando`, `08-fenosoa`, `09-zo`, `10-vony`, `11-tahiry`, `12-nomena`
-
-Le numéro en préfixe est l'id du choriste dans `src/data.js` : il évite les
-collisions si deux choristes portent le même prénom.
-
-## Remarque
+## Remarque technique
 
 Le logo `ame-logo.png` est resté à la racine de `public/` (et non dans
-`images/`) car il sert aussi de favicon à `index.html`.
+`images/`) car il sert aussi de favicon dans `index.html`.

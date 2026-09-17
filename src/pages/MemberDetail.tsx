@@ -2,7 +2,7 @@ import { useRoute } from "wouter";
 import Layout from "../components/Layout";
 import BackLink from "../components/BackLink";
 import NotFound from "./NotFound";
-import { getMember } from "../data";
+import { getMember, memberRoleLabel } from "../data";
 
 export default function MemberDetail() {
   const [, params] = useRoute<{ id: string }>("/members/:id");
@@ -10,6 +10,8 @@ export default function MemberDetail() {
   if (!member) return <NotFound />;
 
   const restOfName = member.name.split(" ").slice(1).join(" ");
+  const isMusician = member.category === "Musicien";
+  const hasFacts = Boolean(member.joined || member.voice || member.instrument);
 
   return (
     <Layout>
@@ -25,24 +27,44 @@ export default function MemberDetail() {
               />
             </div>
             <div>
-              <div className="eyebrow">Membre de la chorale</div>
+              <div className="eyebrow">
+                {isMusician ? "Musicien de la chorale" : "Membre de la chorale"}
+              </div>
               <h1 className="mt-[14px] mb-2 font-serif text-[clamp(4rem,8vw,8rem)] leading-[0.78] tracking-[-0.06em] font-semibold">
                 {member.firstName}
-                <br />
-                <span className="text-coral">{restOfName}</span>
+                {restOfName ? (
+                  <>
+                    <br />
+                    <span className="text-coral">{restOfName}</span>
+                  </>
+                ) : null}
               </h1>
-              <div className="text-coral text-sm font-bold">{member.role}</div>
+              <div className="text-coral text-sm font-bold">{memberRoleLabel(member)}</div>
               <p className="max-w-[440px] my-7 text-muted leading-[1.8]">{member.bio}</p>
-              <div className="flex gap-7 pt-[22px] border-t border-line">
-                <div>
-                  <strong className="block text-ink font-serif text-[28px]">{member.joined}</strong>
-                  <span className="text-muted text-[10px] uppercase tracking-[0.1em]">Année d'entrée</span>
+              {hasFacts && (
+                <div className="flex gap-7 pt-[22px] border-t border-line">
+                  {member.joined && (
+                    <div>
+                      <strong className="block text-ink font-serif text-[28px]">{member.joined}</strong>
+                      <span className="text-muted text-[10px] uppercase tracking-[0.1em]">
+                        {isMusician ? "Depuis" : "Année d'entrée"}
+                      </span>
+                    </div>
+                  )}
+                  {member.voice && (
+                    <div>
+                      <strong className="block text-ink font-serif text-[28px]">{member.voice}</strong>
+                      <span className="text-muted text-[10px] uppercase tracking-[0.1em]">Voix</span>
+                    </div>
+                  )}
+                  {member.instrument && (
+                    <div>
+                      <strong className="block text-ink font-serif text-[28px]">{member.instrument}</strong>
+                      <span className="text-muted text-[10px] uppercase tracking-[0.1em]">Instrument</span>
+                    </div>
+                  )}
                 </div>
-                <div>
-                  <strong className="block text-ink font-serif text-[28px]">{member.voice}</strong>
-                  <span className="text-muted text-[10px] uppercase tracking-[0.1em]">Voix</span>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
