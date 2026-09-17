@@ -60,13 +60,12 @@ export const members = [
   { id: "14", category: "Choriste", firstName: "Liantsoa", name: "Liantsoa", role: "Pupitre 2eme voix", joined: "2012", voice: "2e", image: portrait("Liantsoa"), bio: "Une des plus active parmis les 2eme voix" },
   { id: "15", category: "Choriste", firstName: "Mireille", name: "Mireille", role: "2eme Voix active", joined: "2012", voice: "2e", image: portrait("Mireille"), bio: "Une des plus active parmis les 2eme voix." },
   // --- Musiciens (portraits dans public/images/members/Musicien/) ---
-  // `instrument` est volontairement vide : à compléter quand l'info sera disponible,
-  // la carte affichera alors « Musicien · <instrument> ».
-  { id: "16", category: "Musicien", firstName: "Be", name: "Be", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Be"), bio: "Be accompagne le chœur lors des grandes célébrations et veille au rythme de l'ensemble." },
-  { id: "17", category: "Musicien", firstName: "Fitahiana", name: "Fitahiana", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Fitahiana"), bio: "Fitahiana met son oreille musicale au service du groupe, entre accompagnement et arrangements." },
-  { id: "18", category: "Musicien", firstName: "Kiki", name: "Kiki", role: "Musicien", instrument: "", voice: "", image: musicianPortrait("Kiki"), bio: "Kiki complète l'ensemble et veille à l'équilibre sonore pendant les concerts." },
-  { id: "19", category: "Musicien", firstName: "Ranto", name: "Ranto", role: "Musicien", joined: "2024", instrument: "", voice: "", image: musicianPortrait("Ranto"), bio: "Ranto chante parmi les ténors et accompagne le groupe sur scène." },
-  { id: "20", category: "Musicien", firstName: "Setra", name: "Setra", role: "Musicien", joined: "2010", instrument: "", voice: "", image: musicianPortrait("Setra"), bio: "Setra accompagne le chœur depuis 2010 et compte parmi les musiciens historiques du groupe." },
+  // `instrument` est affiché sous la forme « Musicien · <instrument> » (voir memberRoleLabel).
+  { id: "16", category: "Musicien", firstName: "Be", name: "Be", role: "Musicien", instrument: "Percussions", voice: "", image: musicianPortrait("Be"), bio: "Be accompagne le chœur lors des grandes célébrations et veille au rythme de l'ensemble." },
+  { id: "17", category: "Musicien", firstName: "Fitahiana", name: "Fitahiana", role: "Musicien", instrument: "Guitare basse", voice: "", image: musicianPortrait("Fitahiana"), bio: "Fitahiana met son oreille musicale au service du groupe, entre accompagnement et arrangements." },
+  { id: "18", category: "Musicien", firstName: "Kiki", name: "Kiki", role: "Musicien", instrument: "Piano", voice: "", image: musicianPortrait("Kiki"), bio: "Kiki complète l'ensemble et veille à l'équilibre sonore pendant les concerts." },
+  { id: "19", category: "Musicien", firstName: "Ranto", name: "Ranto", role: "Musicien", joined: "2024", instrument: "Guitare", voice: "", image: musicianPortrait("Ranto"), bio: "Ranto chante parmi les ténors et accompagne le groupe sur scène." },
+  { id: "20", category: "Musicien", firstName: "Setra", name: "Setra", role: "Musicien", joined: "2010", instrument: "Trompette", voice: "", image: musicianPortrait("Setra"), bio: "Setra accompagne le chœur depuis 2010 et compte parmi les musiciens historiques du groupe." },
 ];
 
 export const events = [
