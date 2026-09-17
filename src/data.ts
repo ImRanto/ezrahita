@@ -1,24 +1,8 @@
-// Données de démonstration pour le site de la chorale Ezrahita.
-//
-// Toutes les images sont servies en local depuis `public/images`. On les
-// référence toujours depuis la racine du site (`/images/...`) : le dossier
-// `public` ne figure jamais dans le chemin, Vite le copie tel quel dans
-// `dist/`. Voir `public/images/LISEZ-MOI.md` pour la liste des fichiers.
-//
-// Pour remplacer une photo, écraser simplement le fichier en gardant le même
-// nom : aucun changement de code n'est nécessaire.
-//
-// Les appels gardent les dimensions d'origine (`scene("gal-1", 900, 1100)`) pour
-// documenter le ratio attendu. Elles sont volontairement ignorées : le fichier
-// local est servi tel quel, sans recadrage.
 const scene = (name, _width, _height) => `/images/Album/Evenement/${name}.jpg`;
 const repetition = (name, _width, _height) => `/images/Album/Repetition/${name}.jpg`;
-// Le préfixe numérique de `name` doit correspondre au champ `id` du membre
-// (ex. membre `id: "1"` -> `portrait("01-hery")`).
 const portrait = (name) => `/images/members/${name}.jpg`;
 const concert = (name, _width, _height) => `/images/Album/Concert/${name}.jpg`;
 const Atelier = (name, _width, _height) => `/images/Album/Atelier/${name}.jpg`;
-const Affiche = (name , _width, _height) => `/images/Album/Affiche/${name}.jpg`;
 
 export const stats = [
   { label: "Choristes actifs", value: 48, suffix: "" },
@@ -59,7 +43,7 @@ export const voices = [
 ];
 
 export const members = [
-  { id: "1", firstName: "Mamy", name: "President Mamy", role: "President 65ème", joined: "2024", voice: "Basse", image: portrait("Mamy"), bio: "Mamy est le président du 65ème depuis 2026, apportant sa vision et son leadership pour guider Ezrahita vers de nouveaux sommets." },
+  { id: "1", firstName: "Mamy", name: "President", role: "President 65ème", joined: "2024", voice: "Basse", image: portrait("Mamy"), bio: "Mamy est le président du 65ème depuis 2026, apportant sa vision et son leadership pour guider Ezrahita vers de nouveaux sommets." },
   { id: "2", firstName: "Arisoa", name: "Arisoa", role: "Choeur", joined: "2025", voice: "1er", image: portrait("Arisoa"), bio: "Arisoa est une des nouvelle recrue de la 1ere voix." },
   { id: "3", firstName: "Setra", name: "Setra", role: "Choriste, pupitre basse", joined: "2010", voice: "Basse", image: portrait("Setra"), bio: "Un des element clé et musicien du groupe." },
   { id: "4", firstName: "Rinoh", name: "Rinoh", role: "Tenor", joined: "2010", voice: "Basse", image: portrait("Rinoh"), bio: "Rinoh fait partie du groupe depuis plusieurs années et apporte sa touche personnelle au répertoire." },
@@ -86,7 +70,6 @@ export const events = [
   { id: "7", day: "09", month: "Mai", date: "9 mai 2026", type: "Festival", title: "Dejeuner Dansante", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Un programme tout en légèreté pour célébrer l'arrivée des beaux jours.", image: scene("scene-74", 900, 600) },
   { id: "8", day: "14", month: "Janv", date: "14 janvier 2025", type: "Atelier", title: "Gaming party", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Ezrahita et ses jeunes talentueux de jeu video.", image: Atelier("atelier-14", 900, 600) },
   { id: "9", day: "05", month: "Avr", date: "05 Avril 2025", type: "Concert", title: "Concert de Pâque", location: "FJKM Ambohimanandray Filadelfia, Antananarivo", description: "Célébration du dimanche de Pâque.", image: concert("concert-27", 900, 600) },
-
 ];
 
 export const news = [

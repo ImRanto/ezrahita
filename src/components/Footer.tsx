@@ -1,11 +1,10 @@
-import { Instagram, MessageCircle, Youtube } from "lucide-react";
+import { MessageCircle, Youtube } from "lucide-react";
 import Brand from "./Brand";
 import { footerNavItems } from "../nav";
 
 const socialLinks = [
-  { label: "Instagram", icon: Instagram },
-  { label: "YouTube", icon: Youtube },
-  { label: "Message", icon: MessageCircle },
+  { label: "YouTube", icon: Youtube, href: "http://www.youtube.com/@ezrahita" },
+  { label: "Message", icon: MessageCircle, href: "#social" },
 ];
 
 function FooterColumn({ title, children }) {
@@ -27,11 +26,11 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Brand />
             <p className="max-w-[220px] mt-5 text-white/55 font-serif text-[25px] leading-[0.9]">
-              Une voix.
+              Une voix
               <br />
-              Une communauté.
+              Une communauté
               <br />
-              Une passion.
+              Une passion
             </p>
           </div>
 
@@ -65,20 +64,24 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Suivez-nous">
-            <a href="#social" className="text-white/56 text-xs transition-colors hover:text-white">
+            <a href="https://www.facebook.com/AntokoMpihiraEzrahita" target="_blank" rel="noreferrer" className="text-white/56 text-xs transition-colors hover:text-white" >
               Facebook
             </a>
-            <a href="#social" className="text-white/56 text-xs transition-colors hover:text-white">
-              Instagram
-            </a>
-            <a href="#social" className="text-white/56 text-xs transition-colors hover:text-white">
+            <a
+              href="http://www.youtube.com/@ezrahita"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white/56 text-xs transition-colors hover:text-white"
+            >
               YouTube
             </a>
             <div className="flex gap-[9px] mt-1" id="social">
-              {socialLinks.map(({ label, icon: Icon }) => (
+              {socialLinks.map(({ label, icon: Icon, href }) => (
                 <a
                   key={label}
-                  href="#social"
+                  href={href}
+                  target={label === "YouTube" ? "_blank" : undefined}
+                  rel={label === "YouTube" ? "noreferrer" : undefined}
                   aria-label={label}
                   className="grid place-items-center w-[30px] h-[30px] border border-white/20 rounded-full text-white transition-colors hover:border-coral hover:bg-coral"
                 >
