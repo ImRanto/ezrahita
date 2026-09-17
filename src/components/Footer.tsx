@@ -1,13 +1,7 @@
 import { MapPin, MessageCircle, Youtube } from "lucide-react";
 import Brand from "./Brand";
 import { footerNavItems } from "../nav";
-
-// Lien de recherche Google Maps officiel (pas de clé d'API nécessaire) :
-// ouvre la carte directement sur le lieu.
-const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  "FJKM Ambohimanandray Filadelfia, Antananarivo, Madagascar"
-)}`;
-
+import { venue } from "../data";
 const socialLinks = [
   { label: "YouTube", icon: Youtube, href: "http://www.youtube.com/@ezrahita" },
   { label: "Message", icon: MessageCircle, href: "#social" },
@@ -54,7 +48,7 @@ export default function Footer() {
 
           <FooterColumn title="Contact">
             <a
-              href={mapHref}
+              href={venue.mapUrl}
               target="_blank"
               rel="noreferrer"
               title="Voir sur Google Maps"

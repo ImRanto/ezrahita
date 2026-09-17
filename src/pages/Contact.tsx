@@ -5,9 +5,15 @@ import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 import FormField from "../components/FormField";
 import Toast from "../components/Toast";
+import { venue } from "../data";
 
 const contactItems = [
-  { icon: MapPin, title: "Nous trouver", detail: "FJKM Ambohimanandray Filadelfia, Antananarivo" },
+  {
+    icon: MapPin,
+    title: "Nous trouver",
+    detail: `${venue.name}, ${venue.city}`,
+    href: venue.mapUrl,
+  },
   { icon: MessageCircle, title: "Nous écrire", detail: "contact@ezrahita.mg" },
   { icon: Clock3, title: "Répétitions", detail: "Chaque samedi, 18h30" },
 ];
@@ -48,14 +54,26 @@ export default function Contact() {
                 répondrons avec plaisir.
               </p>
               <div className="grid gap-[19px] mt-[35px]">
-                {contactItems.map(({ icon: Icon, title, detail }) => (
+                {contactItems.map(({ icon: Icon, title, detail, href }) => (
                   <div key={title} className="flex gap-[13px] items-start">
                     <div className="grid place-items-center w-[35px] h-[35px] rounded-[10px] text-cobalt bg-[#eef3ff] shrink-0">
                       <Icon size={16} />
                     </div>
                     <div>
                       <strong className="block mb-1 text-xs">{title}</strong>
-                      <span className="text-muted text-xs">{detail}</span>
+                      {href ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noreferrer"
+                          title="Voir sur Google Maps"
+                          className="text-muted text-xs underline decoration-line underline-offset-[3px] transition-colors hover:text-cobalt hover:decoration-cobalt"
+                        >
+                          {detail}
+                        </a>
+                      ) : (
+                        <span className="text-muted text-xs">{detail}</span>
+                      )}
                     </div>
                   </div>
                 ))}
