@@ -1,7 +1,7 @@
 import { MapPin, MessageCircle, Youtube } from "lucide-react";
 import Brand from "./Brand";
 import { footerNavItems } from "../nav";
-import { venue } from "../data";
+import { contactEmail, venue } from "../data";
 const socialLinks = [
   { label: "YouTube", icon: Youtube, href: "http://www.youtube.com/@ezrahita" },
   { label: "Message", icon: MessageCircle, href: "#social" },
@@ -60,10 +60,10 @@ export default function Footer() {
             </a>
             <span className="text-white/56 text-xs">Antananarivo, Madagascar</span>
             <a
-              href="mailto:contact@ezrahita.mg"
+              href={`mailto:${contactEmail}`}
               className="text-white/56 text-xs transition-colors hover:text-white"
             >
-              contact@ezrahita.mg
+              {contactEmail}
             </a>
             <a
               href="tel:+261000000000"

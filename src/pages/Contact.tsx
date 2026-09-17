@@ -5,7 +5,7 @@ import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 import FormField from "../components/FormField";
 import Toast from "../components/Toast";
-import { venue } from "../data";
+import { contactEmail, venue } from "../data";
 
 const contactItems = [
   {
@@ -14,7 +14,7 @@ const contactItems = [
     detail: `${venue.name}, ${venue.city}`,
     href: venue.mapUrl,
   },
-  { icon: MessageCircle, title: "Nous écrire", detail: "contact@ezrahita.mg" },
+  { icon: MessageCircle, title: "Nous écrire", detail: contactEmail },
   { icon: Clock3, title: "Répétitions", detail: "Chaque samedi, 18h30" },
 ];
 

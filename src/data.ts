@@ -5,6 +5,9 @@ const musicianPortrait = (name) => `/images/members/Musicien/${name}-m.jpg`;
 const concert = (name, _width, _height) => `/images/Album/Concert/${name}.jpg`;
 const Atelier = (name, _width, _height) => `/images/Album/Atelier/${name}.jpg`;
 
+// Adresse e-mail de contact du site (affichée dans le footer et sur la page Contact).
+export const contactEmail = "ezrahita.ambohimanandray@gmail.com";
+
 // Lieu de culte de la chorale. `mapUrl` utilise le format de lien Google Maps
 // officiel (aucune clé d'API requise) : ouvre la carte sur le lieu recherché.
 export const venue = {
