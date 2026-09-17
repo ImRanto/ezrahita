@@ -1,6 +1,12 @@
-import { MessageCircle, Youtube } from "lucide-react";
+import { MapPin, MessageCircle, Youtube } from "lucide-react";
 import Brand from "./Brand";
 import { footerNavItems } from "../nav";
+
+// Lien de recherche Google Maps officiel (pas de clé d'API nécessaire) :
+// ouvre la carte directement sur le lieu.
+const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  "FJKM Ambohimanandray Filadelfia, Antananarivo, Madagascar"
+)}`;
 
 const socialLinks = [
   { label: "YouTube", icon: Youtube, href: "http://www.youtube.com/@ezrahita" },
@@ -47,7 +53,17 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Contact">
-            <span className="text-white/56 text-xs">FJKM Ambohimanandray Filadelfia</span>
+            <a
+              href={mapHref}
+              target="_blank"
+              rel="noreferrer"
+              title="Voir sur Google Maps"
+              className="group inline-flex items-start gap-1.5 text-white/56 text-xs transition-colors hover:text-white"
+            >
+              <span className="underline decoration-white/25 underline-offset-[3px] transition-colors group-hover:decoration-white/70">
+                FJKM Ambohimanandray Filadelfia
+              </span>
+            </a>
             <span className="text-white/56 text-xs">Antananarivo, Madagascar</span>
             <a
               href="mailto:contact@ezrahita.mg"
