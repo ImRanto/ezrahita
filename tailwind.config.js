@@ -36,11 +36,21 @@ export default {
           from: { opacity: 0, transform: "translateY(12px)" },
           to: { opacity: 1, transform: "translateY(0)" },
         },
+        "loader-pop": {
+          from: { opacity: 0, transform: "scale(0.94)" },
+          to: { opacity: 1, transform: "scale(1)" },
+        },
+        "loader-slide": {
+          from: { transform: "translateX(-120%)" },
+          to: { transform: "translateX(420%)" },
+        },
       },
       animation: {
         reveal: "reveal .65s cubic-bezier(0.23, 1, 0.32, 1) both",
         float: "float 6s ease-in-out infinite",
         "toast-in": "toast-in .3s cubic-bezier(0.23, 1, 0.32, 1)",
+        "loader-pop": "loader-pop .3s cubic-bezier(0.23, 1, 0.32, 1) both",
+        "loader-slide": "loader-slide 1s cubic-bezier(0.45, 0, 0.55, 1) infinite",
       },
     },
   },
