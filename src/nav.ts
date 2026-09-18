@@ -5,6 +5,7 @@ export const navItems = [
   ["Activités", "/voices"],
   ["Événements", "/events"],
   ["Actualités", "/news"],
+  ["Vidéos", "/videos"],
   ["Galerie", "/gallery"],
   ["Contact", "/contact"],
 ];
@@ -15,5 +16,6 @@ export const footerNavItems = [
   ["Membres", "/members"],
   ["Événements", "/events"],
   ["Actualités", "/news"],
+  ["Vidéos", "/videos"],
   ["Galerie", "/gallery"],
 ];
