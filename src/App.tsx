@@ -1,5 +1,4 @@
 import { Route, Switch } from "wouter";
-import PageLoader from "./components/PageLoader";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Members from "./pages/Members";
@@ -20,7 +19,6 @@ import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <>
-      <PageLoader />
       <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
