@@ -10,7 +10,6 @@ const voiceOptions = ["Toutes", "1er", "2e", "3e", "Basse"];
 // `value` doit correspondre exactement au champ `category` défini dans src/data.ts,
 // `label` est ce que l'on affiche (pluriel).
 const categoryOptions = [
-  { value: "Tous", label: "Tous" },
   { value: "Choriste", label: "Choristes" },
   { value: "Musicien", label: "Musiciens" },
 ];
@@ -20,14 +19,14 @@ const normalizeCategory = (value) =>
     (option) =>
       option.value.toLowerCase() === String(value).toLowerCase() ||
       option.label.toLowerCase() === String(value).toLowerCase()
-  )?.value || "Tous";
+  )?.value || "Choriste";
 
 export default function Members() {
   const params = new URLSearchParams(window.location.search);
   const initialVoice = params.get("voice") || "Toutes";
   const [query, setQuery] = useState("");
   const [voice, setVoice] = useState(initialVoice);
-  const [category, setCategory] = useState(() => normalizeCategory(params.get("category") || "Tous"));
+  const [category, setCategory] = useState(() => normalizeCategory(params.get("category") || "Choriste"));
 
   const isMusicians = category === "Musicien";
 
@@ -50,7 +49,7 @@ export default function Members() {
           `${member.name} ${member.role} ${member.instrument || ""}`
             .toLowerCase()
             .includes(query.toLowerCase()) &&
-          (category === "Tous" || member.category === category) &&
+          member.category === category &&
           // Les musiciens ne sont rattachés à aucun pupitre.
           (isMusicians || voice === "Toutes" || member.voice === voice)
       ),

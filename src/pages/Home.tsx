@@ -170,7 +170,7 @@ export default function Home() {
                   <span className="text-coral">des histoires.</span>
                 </>
               }
-              text="Ils et elles donnent leur souffle, leur écoute et leur énergie à notre aventure."
+              text="Chaque membre du groupe donnent leur souffle, leur écoute et leur énergie à notre aventure."
               action={
                 <Link href="/members" className="text-link">
                   Voir tous les membres <ArrowRight size={15} />
