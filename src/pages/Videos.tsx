@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
 import PageHero from "../components/PageHero";
-import FilterPills from "../components/FilterPills";
+import FilterBar from "../components/FilterBar";
 import VideoCard from "../components/VideoCard";
 import { videos } from "../data";
 
@@ -42,33 +42,15 @@ export default function Videos() {
           <div className="w-[min(1180px,calc(100%-48px))] mx-auto">
             {videos.length > 0 ? (
               <>
-                <div className="mb-[35px] p-1.5 md:p-2 border border-cobalt/35 rounded-[50px] bg-mist">
-                  <div>
-                    <span className="block mb-1 text-center text-muted text-[10px] font-bold uppercase tracking-[0.14em]">
-                      Groupe
-                    </span>
-                    <FilterPills
-                      options={groupOptions}
-                      active={groupFilter}
-                      onChange={selectGroup}
-                      className="mb-0 justify-center"
-                      compact
-                    />
-                  </div>
-                  {groupFilter !== "Tous" && (
-                    <div className="w-full max-w-[560px] mx-auto mt-1.5 pt-1 border-t border-cobalt/20">
-                      <span className="block mb-1 text-center text-muted text-[10px] font-bold uppercase tracking-[0.14em]">
-                        Époque
-                      </span>
-                      <FilterPills
-                        options={periodOptions}
-                        active={periodFilter}
-                        onChange={setPeriodFilter}
-                        className="mb-0 justify-center"
-                        compact
-                      />
-                    </div>
-                  )}
+                <div className="mb-[35px] flex justify-center">
+                  <FilterBar
+                    groupOptions={groupOptions}
+                    activeGroup={groupFilter}
+                    onGroupChange={selectGroup}
+                    periodOptions={periodOptions}
+                    activePeriod={periodFilter}
+                    onPeriodChange={setPeriodFilter}
+                  />
                 </div>
                 {filtered.length > 0 ? (
                   <>
