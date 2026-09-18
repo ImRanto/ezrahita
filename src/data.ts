@@ -106,6 +106,81 @@ export const news = [
   { id: "9", category: "Portraits", date: "24 mai 2026", title: "Le Retour du Chef de chœur Hery", excerpt: "Hery revient sur douze années à la tête d'Ezrahita et sur ce qui fait, selon lui, un bon chœur.", image: scene("scene-56", 900, 700) },
 ];
 
+export const videos = [
+  {
+    id: "R3Vc7ADJQu4",
+    videoId: "R3Vc7ADJQu4",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Ny Fitiavany anao",
+    description: "Une de nos derniere album avec l'artiste Mahery G5.",
+  },
+  {
+    id: "7REuGTKYcWc",
+    videoId: "7REuGTKYcWc",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Midera anao",
+    description: "Mi Mi DO.",
+  },
+  {
+    id: "OzV8I8JIt1M",
+    videoId: "OzV8I8JIt1M",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Ny Sambonay",
+    description: "Ce clip est une des chanson qui a fait connaitre le groupe Ezrahita, et qui a été un grand succès.",
+  },
+  {
+    id: "FvskLzAYfp4",
+    videoId: "FvskLzAYfp4",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Didy fahadimy",
+    description: "la 5eme commandement de Dieu.",
+  },
+  {
+    id: "I43Ha3Ucbpk",
+    videoId: "I43Ha3Ucbpk",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Mitràka",
+    description: "Le groupe est entré en collaboration avec le célèbre artise Daniel, un de nos meilleur succès",
+  },
+  {
+    id: "IhTQKfZdF5I",
+    videoId: "IhTQKfZdF5I",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Aina",
+    description: "Une chanson très populaire du groupe Ezrahita.",
+  },
+  {
+    id: "-bC9zAO1ZrU",
+    videoId: "-bC9zAO1ZrU",
+    category: "Clip",
+    date: "YouTube",
+    title: "AME-Feno toky ny Fanahy",
+    description: "cette chanson a été crée par Paul Ramilison , chanté et perfectionné par le groupe Ezrahita.",
+  },
+  {
+    id: "YnZboipz-ig",
+    videoId: "YnZboipz-ig",
+    category: "Clip",
+    date: "YouTube",
+    title: "Ry Tompo ô",
+    description: "Une de nos anciens album qui a été un grand succès aussi.",
+  },
+  {
+    id: "gg0x5NGpBI8",
+    videoId: "gg0x5NGpBI8",
+    category: "Clip",
+    date: "YouTube",
+    title: "TAME-O Mila anao !",
+    description: "Cette chanson a été perfectionnée et rendue célèbre par nos successeur et enfant du groupe Ezrahita nommé Taninketsan'ny Antoko Mpihira Ezrahita.",
+  },
+];
+
 const createGalleryAlbum = (folder, prefix, count, album, caption) =>
   Array.from({ length: count }, (_, index) => {
     const number = index + 1;
@@ -136,3 +211,4 @@ export const memberRoleLabel = (member) =>
 export const getMember = (id) => members.find((m) => m.id === id);
 export const getEvent = (id) => events.find((e) => e.id === id);
 export const getNews = (id) => news.find((n) => n.id === id);
+export const getVideo = (id) => videos.find((video) => video.id === id);

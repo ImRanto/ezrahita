@@ -8,6 +8,8 @@ import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
+import Videos from "./pages/Videos";
+import VideoDetail from "./pages/VideoDetail";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
@@ -26,6 +28,8 @@ export default function App() {
       <Route path="/events/:id" component={EventDetail} />
       <Route path="/news" component={News} />
       <Route path="/news/:id" component={NewsDetail} />
+      <Route path="/videos" component={Videos} />
+      <Route path="/videos/:id" component={VideoDetail} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
