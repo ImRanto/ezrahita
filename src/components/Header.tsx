@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ArrowRight, Menu, Users, X } from "lucide-react";
+import { ArrowRight, Mail, Menu, X } from "lucide-react";
 import Brand from "./Brand";
 import { navItems } from "../nav";
 
@@ -48,12 +48,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="hidden lg:inline-flex items-center gap-2 py-2.5 px-[15px] border border-current rounded-full text-xs font-bold opacity-95 cursor-pointer transition duration-200 ease-out-smooth hover:opacity-100 active:scale-[0.97]"
+        <Link
+          href="/contact"
+          className="hidden lg:inline-flex items-center gap-2 py-2.5 px-[15px] border border-current rounded-full text-xs font-bold opacity-95 transition duration-200 ease-out-smooth hover:opacity-100 hover:bg-coral hover:border-coral hover:text-white active:scale-[0.97]"
         >
-          <Users size={14} /> Espace membre
-        </button>
+          <Mail size={14} /> Contactez-nous
+        </Link>
 
         <button
           className="lg:hidden grid w-[42px] h-[42px] place-items-center text-current bg-transparent"
@@ -78,12 +78,12 @@ export default function Header() {
               {label}
             </Link>
           ))}
-          <button
-            type="button"
-            className="mt-[5px] py-[13px] px-3 rounded-[9px] text-[13px] font-bold text-center text-white bg-cobalt inline-flex items-center justify-center gap-2 cursor-pointer transition duration-200 ease-out-smooth active:scale-[0.97]"
+          <Link
+            href="/contact"
+            className="mt-[5px] py-[13px] px-3 rounded-[9px] text-[13px] font-bold text-center text-white bg-cobalt inline-flex items-center justify-center gap-2 transition duration-200 ease-out-smooth hover:bg-cobalt-dark active:scale-[0.97]"
           >
-            Espace membre <ArrowRight size={14} />
-          </button>
+            Contactez-nous <ArrowRight size={14} />
+          </Link>
         </nav>
       )}
     </header>

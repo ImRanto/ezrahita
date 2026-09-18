@@ -7,7 +7,6 @@ export const navItems = [
   ["Actualités", "/news"],
   ["Vidéos", "/videos"],
   ["Galerie", "/gallery"],
-  ["Contact", "/contact"],
 ];
 
 export const footerNavItems = [
