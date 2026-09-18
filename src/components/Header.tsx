@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, Mail, Menu, X } from "lucide-react";
 import Brand from "./Brand";
-import { navItems } from "../nav";
+import NavDropdown from "./NavDropdown";
+import { navItems, flatNavItems } from "../nav";
 
 export default function Header() {
   const [location] = useLocation();
@@ -26,26 +27,34 @@ export default function Header() {
           : "text-white"
       }`}
     >
-      <div className="w-[min(1180px,calc(100%-48px))] mx-auto flex items-center justify-between min-h-[78px] gap-[30px]">
+      <div
+        className={`w-[min(1180px,calc(100%-48px))] mx-auto flex items-center justify-between gap-[30px] transition-[min-height] duration-300 ease-out-smooth ${
+          scrolled ? "min-h-[64px]" : "min-h-[78px]"
+        }`}
+      >
         <Brand />
 
         <nav
           aria-label="Navigation principale"
           className="hidden lg:flex items-center gap-6 ml-auto"
         >
-          {navItems.map(([label, href]) => (
-            <Link
-              key={href}
-              href={href}
-              className={`relative text-xs font-semibold transition-opacity duration-200 ${
-                location === href
-                  ? "opacity-100 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:bg-coral"
-                  : "opacity-80 hover:opacity-100"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            Array.isArray(item) ? (
+              <Link
+                key={item[1]}
+                href={item[1]}
+                className={`relative text-xs font-semibold transition-opacity duration-200 ${
+                  location === item[1]
+                    ? "opacity-100 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:bg-coral after:scale-x-100"
+                    : "opacity-80 hover:opacity-100 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-0.5 after:bg-coral after:scale-x-0 after:origin-left after:transition-transform after:duration-200"
+                }`}
+              >
+                {item[0]}
+              </Link>
+            ) : (
+              <NavDropdown key={item.label} label={item.label} items={item.items} />
+            )
+          )}
         </nav>
 
         <Link
@@ -67,13 +76,15 @@ export default function Header() {
       {open && (
         <nav
           aria-label="Navigation mobile"
-          className="lg:hidden absolute top-[78px] right-[18px] left-[18px] grid gap-1 p-3 border border-line rounded-2xl text-ink bg-white shadow-[0_20px_45px_rgba(11,31,58,0.22)]"
+          className="lg:hidden absolute top-[78px] right-[18px] left-[18px] grid gap-1 p-3 border border-line rounded-2xl text-ink bg-white shadow-[0_20px_45px_rgba(11,31,58,0.22)] max-h-[calc(100dvh-100px)] overflow-y-auto"
         >
-          {navItems.map(([label, href]) => (
+          {flatNavItems.map(([label, href]) => (
             <Link
               key={href}
               href={href}
-              className="py-[13px] px-3 rounded-[9px] text-[13px] font-bold hover:bg-mist hover:text-cobalt"
+              className={`py-[13px] px-3 rounded-[9px] text-[13px] font-bold hover:bg-mist hover:text-cobalt ${
+                location === href ? "text-cobalt bg-mist" : ""
+              }`}
             >
               {label}
             </Link>
