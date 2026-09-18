@@ -59,7 +59,7 @@ export default function Header() {
 
         <Link
           href="/contact"
-          className="hidden lg:inline-flex items-center gap-2 py-2.5 px-[15px] border border-current rounded-full text-xs font-bold opacity-95 transition duration-200 ease-out-smooth hover:opacity-100 hover:bg-coral hover:border-coral hover:text-white active:scale-[0.97]"
+          className="hidden lg:inline-flex items-center gap-2 py-2.5 px-[15px] ml-[26px] border border-current rounded-full text-xs font-bold opacity-95 transition duration-200 ease-out-smooth hover:opacity-100 hover:bg-coral hover:border-coral hover:text-white active:scale-[0.97]"
         >
           <Mail size={14} /> Contactez-nous
         </Link>
