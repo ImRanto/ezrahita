@@ -9,7 +9,7 @@ const socialLinks = [
 
 function FooterColumn({ title, children }) {
   return (
-    <div>
+    <div className="min-w-0">
       <h3 className="mb-[17px] text-white text-[11px] font-bold uppercase tracking-[0.14em]">
         {title}
       </h3>
@@ -22,8 +22,8 @@ export default function Footer() {
   return (
     <footer className="py-[70px] pb-[26px] text-white bg-[#07182d]">
       <div className="w-[min(1180px,calc(100%-48px))] mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-[1.45fr_1fr_1fr_1fr] gap-x-[22px] gap-y-[34px] lg:gap-[40px] pb-[62px]">
-          <div className="col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.45fr_1fr_1fr_1fr] gap-x-[22px] gap-y-[30px] lg:gap-[40px] pb-[62px]">
+          <div className="min-w-0 sm:col-span-2 lg:col-span-1">
             <Brand />
             <p className="max-w-[220px] mt-5 text-white/55 font-serif text-[25px] leading-[0.9]">
               Une voix
@@ -54,14 +54,14 @@ export default function Footer() {
               title="Voir sur Google Maps"
               className="group inline-flex items-start gap-1.5 text-white/56 text-xs transition-colors hover:text-white"
             >
-              <span className="underline decoration-white/25 underline-offset-[3px] transition-colors group-hover:decoration-white/70">
+              <span className="break-words underline decoration-white/25 underline-offset-[3px] transition-colors group-hover:decoration-white/70">
                 FJKM Ambohimanandray Filadelfia
               </span>
             </a>
-            <span className="text-white/56 text-xs">Antananarivo, Madagascar</span>
+            <span className="break-words text-white/56 text-xs">Antananarivo, Madagascar</span>
             <a
               href={`mailto:${contactEmail}`}
-              className="text-white/56 text-xs transition-colors hover:text-white"
+              className="break-all text-white/56 text-xs transition-colors hover:text-white"
             >
               {contactEmail}
             </a>
