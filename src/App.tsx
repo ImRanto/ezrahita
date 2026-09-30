@@ -1,4 +1,6 @@
-import { Route, Switch } from "wouter";
+import { useEffect } from "react";
+import { Route, Switch, useLocation } from "wouter";
+import PageLoader from "./components/PageLoader";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Members from "./pages/Members";
@@ -16,9 +18,48 @@ import Login from "./pages/Login";
 import MemberDashboard from "./pages/MemberDashboard";
 import NotFound from "./pages/NotFound";
 
+const goatCounterUrl = (import.meta as any).env.VITE_GOATCOUNTER_URL?.replace(/\/$/, "");
+let goatCounterScript;
+let lastTrackedPath;
+
+function trackPageViews(path) {
+  if (!goatCounterUrl || lastTrackedPath === path) return;
+  lastTrackedPath = path;
+
+  if (!goatCounterScript) {
+    (window as any).goatcounter = { no_onload: true };
+    goatCounterScript = new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `${goatCounterUrl}/count.js`;
+      script.setAttribute("data-goatcounter", `${goatCounterUrl}/count`);
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.head.appendChild(script);
+    });
+  }
+
+  goatCounterScript.then((loaded) => {
+    if (loaded && (window as any).goatcounter?.count) {
+      (window as any).goatcounter.count({ path });
+    }
+  });
+}
+
+function PageViewTracker() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    trackPageViews(location);
+  }, [location]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <>
+      <PageViewTracker />
       <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />

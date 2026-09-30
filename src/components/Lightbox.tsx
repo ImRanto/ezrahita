@@ -1,6 +1,6 @@
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, X } from "lucide-react";
 
-export default function Lightbox({ item, index, total, onClose, onMove }) {
+export default function Lightbox({ item, index, total, onClose, onMove, liked, onToggleLike }) {
   if (!item) return null;
 
   return (
@@ -43,8 +43,21 @@ export default function Lightbox({ item, index, total, onClose, onMove }) {
       >
         <ChevronRight size={22} />
       </button>
-      <div className="absolute bottom-6 text-white/70 text-xs">
-        {item.caption} · {index + 1} / {total}
+      <div className="absolute bottom-6 flex items-center gap-4 max-w-[calc(100%-100px)] text-white/75 text-xs">
+        <span className="truncate">{item.caption} · {index + 1} / {total}</span>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleLike();
+          }}
+          aria-label={liked ? "Retirer le j'aime" : "Aimer cette photo"}
+          aria-pressed={liked}
+          className="inline-flex shrink-0 items-center gap-1.5 min-h-9 px-3 rounded-full border border-white/30 bg-white/10 text-white hover:bg-white/20"
+        >
+          <Heart size={16} className={liked ? "fill-[#ff8b88] text-[#ff8b88]" : ""} />
+          {liked ? 1 : 0}
+        </button>
       </div>
     </div>
   );

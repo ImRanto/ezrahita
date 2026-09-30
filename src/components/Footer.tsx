@@ -1,5 +1,6 @@
 import { MapPin, MessageCircle, Youtube } from "lucide-react";
 import Brand from "./Brand";
+import FooterViewCount from "./FooterViewCount";
 import { footerNavItems } from "../nav";
 import { contactEmail, venue } from "../data";
 const socialLinks = [
@@ -66,10 +67,10 @@ export default function Footer() {
               {contactEmail}
             </a>
             <a
-              href="tel:+261000000000"
+              href="tel:+261 00 000 00"
               className="text-white/56 text-xs transition-colors hover:text-white"
             >
-              +261 XX XX XXX XX
+              +261 00 000 00
             </a>
           </FooterColumn>
 
@@ -104,6 +105,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[15px] pt-6 border-t border-white/[0.11] text-white/40 text-[10px]">
           <span>© 2026 Ezrahita. Tous droits réservés.</span>
+          <FooterViewCount />
           <span>Fait de voix, de souffle et de liens.</span>
         </div>
       </div>

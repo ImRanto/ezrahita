@@ -19,6 +19,18 @@ npm run build     # build de production dans dist/
 npm run preview   # prévisualiser le build
 ```
 
+## Compteur de vues
+
+Le footer utilise GoatCounter pour compter les changements de page et afficher le total public.
+Créez un site GoatCounter, activez son compteur public, puis définissez ces variables dans un fichier `.env.local` :
+
+```env
+VITE_GOATCOUNTER_URL=https://votre-code.goatcounter.com
+VITE_GOATCOUNTER_COUNTER_URL=https://votre-code.goatcounter.com/counter/chemin-du-compteur.json
+```
+
+La seconde URL doit être l'URL JSON du compteur public dont le total doit apparaître dans le footer. Redémarrez Vite après avoir modifié `.env.local`.
+
 ## Structure
 
 ```
