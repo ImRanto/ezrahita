@@ -69,11 +69,9 @@ export const members = [
   { id: "10", category: "Choriste", firstName: "Prisca", name: "Prisca", role: "Pupitre 1er voix", joined: "2017", voice: "1er", image: portrait("Prisca"), bio: "Premier voix ayant beaucoup d'energie ,toujour prete pour aider et faisant partie des solistes." },
   { id: "11", category: "Choriste", firstName: "Ranto", name: "Ranto", role: "Tenor", joined: "2020",voice: "3e", image: portrait("ranto"), bio: "Jeunes tenors actifs" },
   { id: "12", category: "Choriste", firstName: "Mireille", name: "Mireille", role: "2eme Voix active", joined: "2012", voice: "2e", image: portrait("Mireille"), bio: "Une des plus active parmis les 2eme voix." },
-
   // --- Musiciens (portraits dans public/images/members/Musicien/) ---
 
   // `instrument` est affiché sous la forme « Musicien · <instrument> » (voir memberRoleLabel).
- 
   { id: "13", category: "Musicien", firstName: "Be", name: "Be", role: "Musicien", instrument: "Percussions", voice: "", image: musicianPortrait("Be"), bio: "Be accompagne le chœur lors des grandes célébrations et veille au rythme de l'ensemble." },
   { id: "14", category: "Musicien", firstName: "Fitahiana", name: "Fitahiana", role: "Musicien", instrument: "Guitare basse et Piano", voice: "3e", image: musicianPortrait("Fitahiana"), bio: "Fitahiana met son oreille musicale au service du groupe, entre accompagnement et arrangements." },
   { id: "15", category: "Musicien", firstName: "Kiki", name: "Kiki", role: "Musicien", instrument: "Piano", voice: "3e", image: musicianPortrait("Kiki"), bio: "Kiki complète l'ensemble et veille à l'équilibre sonore pendant les concerts." },

@@ -59,7 +59,6 @@ function PageViewTracker() {
 export default function App() {
   return (
     <>
-      <PageLoader />
       <PageViewTracker />
       <Switch>
       <Route path="/" component={Home} />
